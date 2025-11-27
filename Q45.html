@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q45</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q45: Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q45: 05_Export_0713_stats_eAwRpPaueh.csv
+Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time?
+Truth = 21.0
+N_ctrl = 145   N_ext = 60
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     1.9909  ± 0.6291
+                   CI = [ 0.9667 , 3.4838 ]
+  Extremized Ex:  2.9778  ± 0.3983
+                   CI = [ 2.1833 , 3.8000 ]
+
+  Difference (Ec - Ex) = -0.9869
+  Percent Change = -49.57%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.0960
+    → 9.6% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 2.9103
+  Extremized ε   = 3.3167
+  Percent Change = 13.96%
+
+  Welch t-test: t = -0.776, p = 0.4388
+  Cohen's d = -0.098
+
+[3] DIVERSITY (δ)
+  Control SD = 5.0172
+  Extremized SD = 3.1331
+  Percent Change = -37.55%
+  Levene p = 0.627
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 28.0
+  Anchor B = 18.0
+  A_effective = False
+  B_effective = False
+
+[5] EQUATION 6 CHECK
+  w_L = 0.3028   w_H = 0.4681
+  Delta = 10.3049
+  Criterion_L = True   Criterion_H = True
+  Meets both = True
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:down, ε:up, E:up
+  Mechanism Explanation: Anchoring backfires: predictions collapse around a misleading anchor, reducing diversity but worsening accuracy.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q45, collective error shifted from 1.99 to 2.98 (-49.57%). Bootstrap = 9.6%. Individual error changed by 13.96%, diversity changed by -37.55%. Scenario = δ:down, ε:up, E:up. Equation 6 feasibility = True.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_45.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_45.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q45.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q45.png">
+    </section>
+</div>
+
+</body>
+</html>

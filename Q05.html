@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q05</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q05: How many different people will present during the keynote this year?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q05: 01_Pilot_stats_OI5xwwgyWi.csv
+How many different people will present during the keynote this year?
+Truth = 9.0
+N_ctrl = 175   N_ext = 87
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     1.8651  ± 0.7943
+                   CI = [ 0.5974 , 3.6216 ]
+  Extremized Ex:  1.2528  ± 0.2767
+                   CI = [ 0.7353 , 1.8046 ]
+
+  Difference (Ec - Ex) = 0.6123
+  Percent Change = 32.83%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.7370
+    → 73.7% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 3.4171
+  Extremized ε   = 2.0115
+  Percent Change = -41.14%
+
+  Welch t-test: t = 2.566, p = 0.01093
+  Cohen's d = 0.253
+
+[3] DIVERSITY (δ)
+  Control SD = 7.1949
+  Extremized SD = 2.5963
+  Percent Change = -63.92%
+  Levene p = 0.0545
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 12.0
+  Anchor B = 8.0
+  A_effective = False
+  B_effective = True
+
+[5] EQUATION 6 CHECK
+  w_L = 0.9108   w_H = 0.8890
+  Delta = 4.1657
+  Criterion_L = True   Criterion_H = False
+  Meets both = False
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:down, ε:down, E:down
+  Mechanism Explanation: Calibration: anchors pull predictions inward toward the truth, reducing both individual error and diversity and improving collective accuracy.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q5, collective error shifted from 1.87 to 1.25 (32.83%). Bootstrap = 73.7%. Individual error changed by -41.14%, diversity changed by -63.92%. Scenario = δ:down, ε:down, E:down. Equation 6 feasibility = False.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_05.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_05.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q05.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q05.png">
+    </section>
+</div>
+
+</body>
+</html>

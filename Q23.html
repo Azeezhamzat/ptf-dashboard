@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q23</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q23: Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q23: 03_Export_0627_stats_NePyKRICQX.csv
+Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.?
+Truth = 24.0
+N_ctrl = 162   N_ext = 46
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     1.5280  ± 0.7801
+                   CI = [ 0.2826 , 3.3478 ]
+  Extremized Ex:  1.4049  ± 0.4098
+                   CI = [ 0.5864 , 2.2174 ]
+
+  Difference (Ec - Ex) = 0.1231
+  Percent Change = 8.06%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.5220
+    → 52.2% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 2.7593
+  Extremized ε   = 2.5870
+  Percent Change = -6.24%
+
+  Welch t-test: t = 0.359, p = 0.72
+  Cohen's d = 0.038
+
+[3] DIVERSITY (δ)
+  Control SD = 5.5764
+  Extremized SD = 2.7942
+  Percent Change = -49.89%
+  Levene p = 0.6451
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 30.0
+  Anchor B = 20.0
+  A_effective = False
+  B_effective = False
+
+[5] EQUATION 6 CHECK
+  w_L = 0.3571   w_H = 0.4146
+  Delta = 8.1585
+  Criterion_L = True   Criterion_H = True
+  Meets both = True
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:down, ε:down, E:down
+  Mechanism Explanation: Calibration: anchors pull predictions inward toward the truth, reducing both individual error and diversity and improving collective accuracy.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q23, collective error shifted from 1.53 to 1.40 (8.06%). Bootstrap = 52.2%. Individual error changed by -6.24%, diversity changed by -49.89%. Scenario = δ:down, ε:down, E:down. Equation 6 feasibility = True.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_23.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_23.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q23.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q23.png">
+    </section>
+</div>
+
+</body>
+</html>

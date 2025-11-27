@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q62</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q62: Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q62: 06_Export_0720_stats_RDQ8ZPzDVr.csv
+Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be?
+Truth = 14.0
+N_ctrl = 200   N_ext = 22
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     7.8267  ± 2.0399
+                   CI = [ 4.5455 , 12.3182 ]
+  Extremized Ex:  6.3233  ± 1.8703
+                   CI = [ 2.7261 , 10.0920 ]
+
+  Difference (Ec - Ex) = 1.5034
+  Percent Change = 19.21%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.6930
+    → 69.3% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 8.5200
+  Extremized ε   = 8.8636
+  Percent Change = 4.03%
+
+  Welch t-test: t = -0.222, p = 0.826
+  Cohen's d = -0.039
+
+[3] DIVERSITY (δ)
+  Control SD = 9.5887
+  Extremized SD = 8.9767
+  Percent Change = -6.38%
+  Levene p = 0.1336
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 34.0
+  Anchor B = 6.0
+  A_effective = False
+  B_effective = False
+
+[5] EQUATION 6 CHECK
+  w_L = 0.4405   w_H = 0.5260
+  Delta = 32.3230
+  Criterion_L = True   Criterion_H = True
+  Meets both = True
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:down, ε:up, E:down
+  Mechanism Explanation: Accidental correction: one anchor lies closer to the truth and dominates. Collective performance improves despite increased individual error.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q62, collective error shifted from 7.83 to 6.32 (19.21%). Bootstrap = 69.3%. Individual error changed by 4.03%, diversity changed by -6.38%. Scenario = δ:down, ε:up, E:down. Equation 6 feasibility = True.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_62.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_62.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q62.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q62.png">
+    </section>
+</div>
+
+</body>
+</html>

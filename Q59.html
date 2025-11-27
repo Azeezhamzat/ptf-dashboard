@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q59</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q59: Happy Anniversary Twitter! What will Twitter's stock price be on the NYSE at noon on Wednesday?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q59: 06_Export_0720_stats_PpeLU4aCVD.csv
+Happy Anniversary Twitter! What will Twitter's stock price be on the NYSE at noon on Wednesday?
+Truth = 43.12
+N_ctrl = 187   N_ext = 27
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     4002.2131  ± 10719.7547
+                   CI = [ 0.8204 , 29634.9379 ]
+  Extremized Ex:  0.7665  ± 0.1916
+                   CI = [ 0.3918 , 1.1283 ]
+
+  Difference (Ec - Ex) = 4001.4465
+  Percent Change = 99.98%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.9650
+    → 96.5% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 4280.4639
+  Extremized ε   = 1.0693
+  Percent Change = -99.98%
+
+  Welch t-test: t = 1.000, p = 0.3184
+  Cohen's d = 0.078
+
+[3] DIVERSITY (δ)
+  Control SD = 58341.8410
+  Extremized SD = 0.9767
+  Percent Change = -100.00%
+  Levene p = 0.7048
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 42.22
+  Anchor B = 44.1
+  A_effective = True
+  B_effective = True
+
+[5] EQUATION 6 CHECK
+  w_L = 0.9998   w_H = 0.9999
+  Delta = 8562.0379
+  Criterion_L = True   Criterion_H = True
+  Meets both = True
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:down, ε:down, E:down
+  Mechanism Explanation: Calibration: anchors pull predictions inward toward the truth, reducing both individual error and diversity and improving collective accuracy.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q59, collective error shifted from 4002.21 to 0.77 (99.98%). Bootstrap = 96.5%. Individual error changed by -99.98%, diversity changed by -100.00%. Scenario = δ:down, ε:down, E:down. Equation 6 feasibility = True.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_59.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_59.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q59.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q59.png">
+    </section>
+</div>
+
+</body>
+</html>

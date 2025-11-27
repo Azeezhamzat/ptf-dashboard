@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PTF Dashboard — Q17</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PTF Dashboard</h2>
+    <a href="index.html">Home</a>
+    <a href="Q03.html">Q03</a>
+<a href="Q04.html">Q04</a>
+<a href="Q05.html">Q05</a>
+<a href="Q11.html">Q11</a>
+<a href="Q12.html">Q12</a>
+<a href="Q14.html">Q14</a>
+<a href="Q17.html">Q17</a>
+<a href="Q18.html">Q18</a>
+<a href="Q19.html">Q19</a>
+<a href="Q20.html">Q20</a>
+<a href="Q21.html">Q21</a>
+<a href="Q23.html">Q23</a>
+<a href="Q24.html">Q24</a>
+<a href="Q26.html">Q26</a>
+<a href="Q29.html">Q29</a>
+<a href="Q30.html">Q30</a>
+<a href="Q32.html">Q32</a>
+<a href="Q35.html">Q35</a>
+<a href="Q37.html">Q37</a>
+<a href="Q38.html">Q38</a>
+<a href="Q40.html">Q40</a>
+<a href="Q41.html">Q41</a>
+<a href="Q45.html">Q45</a>
+<a href="Q47.html">Q47</a>
+<a href="Q50.html">Q50</a>
+<a href="Q51.html">Q51</a>
+<a href="Q54.html">Q54</a>
+<a href="Q59.html">Q59</a>
+<a href="Q60.html">Q60</a>
+<a href="Q62.html">Q62</a>
+</div>
+
+<div class="content">
+    <h1>Question Q17: Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday?</h1>
+
+    <section>
+        <h2>Super Summary</h2>
+        <pre class="summary">================================================================================
+QUESTION Q17: 03_Export_0627_stats_o4HPHtleFO.csv
+Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday?
+Truth = 31.0
+N_ctrl = 161   N_ext = 57
+================================================================================
+
+[1] COLLECTIVE ERROR (E)
+  Control Ec:     6.6066  ± 1.3010
+                   CI = [ 3.9816 , 9.0175 ]
+  Extremized Ex:  5.7504  ± 1.3929
+                   CI = [ 2.8417 , 8.4917 ]
+
+  Difference (Ec - Ex) = 0.8562
+  Percent Change = 12.96%
+
+  Bootstrap:
+    P(Ex < Ec) = 0.6820
+    → 68.2% of samples show extremized < control
+
+[2] INDIVIDUAL ERROR (ε)
+  Control mean ε = 9.4286
+  Extremized ε   = 10.2281
+  Percent Change = 8.48%
+
+  Welch t-test: t = -0.836, p = 0.4051
+  Cohen's d = -0.122
+
+[3] DIVERSITY (δ)
+  Control SD = 9.5115
+  Extremized SD = 10.3246
+  Percent Change = 8.55%
+  Levene p = 0.08972
+
+[4] ANCHOR DIAGNOSTICS
+  Anchor A = 10.0
+  Anchor B = 46.0
+  A_effective = False
+  B_effective = False
+
+[5] EQUATION 6 CHECK
+  w_L = 0.4872   w_H = 0.4436
+  Delta = -28.5061
+  Criterion_L = False   Criterion_H = False
+  Meets both = False
+
+[6] δ–ε–E SCENARIO
+  Scenario: δ:up, ε:up, E:down
+  Mechanism Explanation: True Barrera extremization: diversity increases from opposite anchor shifts. Individual errors rise, but opposing biases cancel enough to reduce collective error.
+
+================================================================================
+FINAL INTERPRETATION (with actual figures)
+================================================================================
+For Q17, collective error shifted from 6.61 to 5.75 (12.96%). Bootstrap = 68.2%. Individual error changed by 8.48%, diversity changed by 8.55%. Scenario = δ:up, ε:up, E:down. Equation 6 feasibility = False.
+================================================================================
+</pre>
+    </section>
+
+    <section>
+        <h2>Mean-Based Plot</h2>
+        <img src="plots/mean/plot_17.png">
+    </section>
+
+    <section>
+        <h2>Mean Mechanism Plot</h2>
+        <img src="plots/mechanism/mechanism_17.png">
+    </section>
+
+    <section>
+        <h2>Median-Based Plot</h2>
+        <img src="plots/median/plot_median_Q17.png">
+    </section>
+
+    <section>
+        <h2>Median Mechanism Plot</h2>
+        <img src="plots/median_mechanism/mechanism_median_Q17.png">
+    </section>
+</div>
+
+</body>
+</html>
