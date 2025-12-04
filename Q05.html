@@ -6,6 +6,7 @@
     <title>PTF Dashboard — Q05</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <div class="sidebar">
@@ -44,10 +45,17 @@
 </div>
 
 <div class="content">
-    <h1>Question Q05: How many different people will present during the keynote this year?</h1>
 
-    <section>
-        <h2>Super Summary</h2>
+    <div class="nav-buttons">
+        <a href="Q04.html">← Previous</a>
+        <a href="Q11.html">Next →</a>
+    </div>
+
+    <h1>Question Q05</h1>
+    <h2 style="margin-top:-10px; color:#555;">Truth = 9.0</h2>
+
+    <div class="summary-container">
+        <div class="summary-header">Show/Hide Super Summary</div>
         <pre class="summary">================================================================================
 QUESTION Q05: 01_Pilot_stats_OI5xwwgyWi.csv
 How many different people will present during the keynote this year?
@@ -55,77 +63,76 @@ Truth = 9.0
 N_ctrl = 175   N_ext = 87
 ================================================================================
 
-[1] COLLECTIVE ERROR (E)
-  Control Ec:     1.8651  ± 0.7943
-                   CI = [ 0.5974 , 3.6216 ]
-  Extremized Ex:  1.2528  ± 0.2767
-                   CI = [ 0.7353 , 1.8046 ]
+[1] MEAN-BASED COLLECTIVE ERROR
+  Ec=1.8651 ± 0.7943, CI=[0.5974,3.6216]
+  Ex=1.2528 ± 0.2767, CI=[0.7353,1.8046]
+  Percent Change = -32.83%
+  Bootstrap P(Ext&lt;Ctrl) = 0.7370
+  t-test(E): t=23.019, p=0.000000 (SIGNIFICANT (p &lt; .05))
 
-  Difference (Ec - Ex) = 0.6123
-  Percent Change = 32.83%
-
-  Bootstrap:
-    P(Ex < Ec) = 0.7370
-    → 73.7% of samples show extremized < control
-
-[2] INDIVIDUAL ERROR (ε)
-  Control mean ε = 3.4171
-  Extremized ε   = 2.0115
+[2] MEAN INDIVIDUAL ERROR (ε)
+  ε_ctrl=3.4171, ε_ext=2.0115
   Percent Change = -41.14%
+  Welch t-test p = 0.01093
 
-  Welch t-test: t = 2.566, p = 0.01093
-  Cohen's d = 0.253
-
-[3] DIVERSITY (δ)
-  Control SD = 7.1949
-  Extremized SD = 2.5963
+[3] MEAN DIVERSITY (δ)
+  δ_ctrl=7.1949, δ_ext=2.5963
   Percent Change = -63.92%
   Levene p = 0.0545
 
 [4] ANCHOR DIAGNOSTICS
-  Anchor A = 12.0
-  Anchor B = 8.0
-  A_effective = False
-  B_effective = True
+  Anchors: A=12.0, B=8.0
+  Effective: A=False, B=True
 
 [5] EQUATION 6 CHECK
-  w_L = 0.9108   w_H = 0.8890
-  Delta = 4.1657
-  Criterion_L = True   Criterion_H = False
-  Meets both = False
+  w_L=0.9108, w_H=0.8890, Δ=4.1657
+  Criterion_L=None, Criterion_H=None
+  Meets both = True
 
-[6] δ–ε–E SCENARIO
+[6] MEAN δ–ε–E SCENARIO
   Scenario: δ:down, ε:down, E:down
-  Mechanism Explanation: Calibration: anchors pull predictions inward toward the truth, reducing both individual error and diversity and improving collective accuracy.
+  Mechanism Explanation: Calibration: forecasts shift inward toward truth (9.0), reducing diversity and individual error.
 
 ================================================================================
-FINAL INTERPRETATION (with actual figures)
+INTERPRETATION — MEAN AGGREGATION
 ================================================================================
-For Q5, collective error shifted from 1.87 to 1.25 (32.83%). Bootstrap = 73.7%. Individual error changed by -41.14%, diversity changed by -63.92%. Scenario = δ:down, ε:down, E:down. Equation 6 feasibility = False.
+Mean-based collective error changed by -32.83% relative to the true value 9.0. Scenario=δ:down, ε:down, E:down. Equation 6 feasibility=True.
 ================================================================================
 </pre>
-    </section>
+    </div>
 
-    <section>
-        <h2>Mean-Based Plot</h2>
-        <img src="plots/mean/plot_05.png">
-    </section>
+    <h2>Mean-Based Plot</h2>
+    <img src="plots/mean/plot_05.png">
 
-    <section>
-        <h2>Mean Mechanism Plot</h2>
-        <img src="plots/mechanism/mechanism_05.png">
-    </section>
+    <h2>Mean Mechanism Plot</h2>
+    <img src="plots/mechanism/mechanism_05.png">
 
-    <section>
-        <h2>Median-Based Plot</h2>
-        <img src="plots/median/plot_median_Q05.png">
-    </section>
+    <h2>Median-Based Plot</h2>
+    <img src="plots/median/plot_median_Q05.png">
 
-    <section>
-        <h2>Median Mechanism Plot</h2>
-        <img src="plots/median_mechanism/mechanism_median_Q05.png">
-    </section>
+    <h2>Median Mechanism Plot</h2>
+    <img src="plots/median_mechanism/mechanism_median_Q05.png">
+
 </div>
+
+<script>
+/* COLLAPSIBLE SUMMARY */
+document.querySelectorAll('.summary-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const p = header.nextElementSibling;
+        p.classList.toggle('open');
+    });
+});
+
+/* DARK MODE TOGGLE */
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.createElement('div');
+    btn.className = 'theme-toggle';
+    btn.innerText = 'Toggle Theme';
+    document.body.appendChild(btn);
+    btn.onclick = () => document.body.classList.toggle('dark');
+});
+</script>
 
 </body>
 </html>
