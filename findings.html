@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Findings — PTF Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>📊 PTF Dashboard</h2>
+    <div class="subtitle">Barrera-Lemarchand Analysis</div>
+    <div class="sidebar-section">
+  <h3>Overview</h3>
+  <a href="index.html">🏠 Home</a>
+  <a href="findings.html" class="active">📊 Key Findings</a>
+  <a href="dpt_analysis.html">📈 DPT Analysis</a>
+  <a href="eq4_analysis.html">🔬 Equation 4</a>
+</div>
+<div class="sidebar-section">
+  <h3>Questions</h3>
+  <a href="Q03.html">Q03</a>
+  <a href="Q04.html">Q04</a>
+  <a href="Q05.html">Q05</a>
+  <a href="Q11.html">Q11</a>
+  <a href="Q12.html">Q12</a>
+  <a href="Q14.html">Q14</a>
+  <a href="Q17.html">Q17</a>
+  <a href="Q18.html">Q18</a>
+  <a href="Q19.html">Q19</a>
+  <a href="Q20.html">Q20</a>
+  <a href="Q21.html">Q21</a>
+  <a href="Q23.html">Q23</a>
+  <a href="Q24.html">Q24</a>
+  <a href="Q26.html">Q26</a>
+  <a href="Q29.html">Q29</a>
+  <a href="Q30.html">Q30</a>
+  <a href="Q32.html">Q32</a>
+  <a href="Q35.html">Q35</a>
+  <a href="Q37.html">Q37</a>
+  <a href="Q38.html">Q38</a>
+  <a href="Q40.html">Q40</a>
+  <a href="Q41.html">Q41</a>
+  <a href="Q45.html">Q45</a>
+  <a href="Q47.html">Q47</a>
+  <a href="Q50.html">Q50</a>
+  <a href="Q51.html">Q51</a>
+  <a href="Q54.html">Q54</a>
+  <a href="Q59.html">Q59</a>
+  <a href="Q60.html">Q60</a>
+  <a href="Q62.html">Q62</a>
+</div>
+</div>
+
+<div class="content">
+    <div class="nav-buttons">
+        <a href="index.html">← Back to Home</a>
+    </div>
+    
+    <h1>📊 Key Findings Summary</h1>
+    
+    <div class="card">
+        <pre style="white-space: pre-wrap; font-family: monospace;">======================================================================
+  PTF ANALYSIS: KEY FINDINGS SUMMARY
+======================================================================
+
+Generated: 2025-12-16 21:19:36
+
+──────────────────────────────────────────────────────────────────────
+DIVERSITY PREDICTION THEOREM (DPT) ANALYSIS
+──────────────────────────────────────────────────────────────────────
+
+  Questions analyzed: 30
+
+  EXTREMIZATION SUCCESS (E_ext < E_ctrl):
+    23/30 questions (76.7%)
+
+  B-L MECHANISM (Δδ > Δε AND E↓):
+    23/30 questions (76.7%)
+
+  CONTROL BIAS PREDICTION ACCURACY:
+    28/30 (93.33333333333333%)
+    Rule: 'If control biased HIGH → LOW anchor wins'
+
+──────────────────────────────────────────────────────────────────────
+EQUATION 4 ANALYSIS (θ vs μ₀ REFERENCE)
+──────────────────────────────────────────────────────────────────────
+
+  θ (Truth):
+    Pearson r = -0.1636, p = 0.224
+    Direction: ✓ NEGATIVE (expected)
+    Significance: Not significant
+
+  μ₀ (Control Mean):
+    Pearson r = +0.1943, p = 0.1476
+    Direction: ✗ POSITIVE (unexpected)
+    Significance: Not significant
+
+  PRACTICAL IMPLICATION:
+    θ (Truth): Requires knowing true answer (post-hoc only)
+    μ₀ (Control Mean): Can be computed without truth ✓
+
+======================================================================
+  END OF KEY FINDINGS
+======================================================================</pre>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,121 +1,308 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PTF Dashboard — Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTF Analysis Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <div class="sidebar">
-    <h2>PTF Dashboard</h2>
-    <a href="index.html">Home</a>
-    <a href="Q03.html">Q03</a>
-<a href="Q04.html">Q04</a>
-<a href="Q05.html">Q05</a>
-<a href="Q11.html">Q11</a>
-<a href="Q12.html">Q12</a>
-<a href="Q14.html">Q14</a>
-<a href="Q17.html">Q17</a>
-<a href="Q18.html">Q18</a>
-<a href="Q19.html">Q19</a>
-<a href="Q20.html">Q20</a>
-<a href="Q21.html">Q21</a>
-<a href="Q23.html">Q23</a>
-<a href="Q24.html">Q24</a>
-<a href="Q26.html">Q26</a>
-<a href="Q29.html">Q29</a>
-<a href="Q30.html">Q30</a>
-<a href="Q32.html">Q32</a>
-<a href="Q35.html">Q35</a>
-<a href="Q37.html">Q37</a>
-<a href="Q38.html">Q38</a>
-<a href="Q40.html">Q40</a>
-<a href="Q41.html">Q41</a>
-<a href="Q45.html">Q45</a>
-<a href="Q47.html">Q47</a>
-<a href="Q50.html">Q50</a>
-<a href="Q51.html">Q51</a>
-<a href="Q54.html">Q54</a>
-<a href="Q59.html">Q59</a>
-<a href="Q60.html">Q60</a>
-<a href="Q62.html">Q62</a>
+    <h2>📊 PTF Dashboard</h2>
+    <div class="subtitle">Barrera-Lemarchand Analysis</div>
+    <div class="sidebar-section">
+  <h3>Overview</h3>
+  <a href="index.html" class="active">🏠 Home</a>
+  <a href="findings.html">📊 Key Findings</a>
+  <a href="dpt_analysis.html">📈 DPT Analysis</a>
+  <a href="eq4_analysis.html">🔬 Equation 4</a>
+</div>
+<div class="sidebar-section">
+  <h3>Questions</h3>
+  <a href="Q03.html">Q03</a>
+  <a href="Q04.html">Q04</a>
+  <a href="Q05.html">Q05</a>
+  <a href="Q11.html">Q11</a>
+  <a href="Q12.html">Q12</a>
+  <a href="Q14.html">Q14</a>
+  <a href="Q17.html">Q17</a>
+  <a href="Q18.html">Q18</a>
+  <a href="Q19.html">Q19</a>
+  <a href="Q20.html">Q20</a>
+  <a href="Q21.html">Q21</a>
+  <a href="Q23.html">Q23</a>
+  <a href="Q24.html">Q24</a>
+  <a href="Q26.html">Q26</a>
+  <a href="Q29.html">Q29</a>
+  <a href="Q30.html">Q30</a>
+  <a href="Q32.html">Q32</a>
+  <a href="Q35.html">Q35</a>
+  <a href="Q37.html">Q37</a>
+  <a href="Q38.html">Q38</a>
+  <a href="Q40.html">Q40</a>
+  <a href="Q41.html">Q41</a>
+  <a href="Q45.html">Q45</a>
+  <a href="Q47.html">Q47</a>
+  <a href="Q50.html">Q50</a>
+  <a href="Q51.html">Q51</a>
+  <a href="Q54.html">Q54</a>
+  <a href="Q59.html">Q59</a>
+  <a href="Q60.html">Q60</a>
+  <a href="Q62.html">Q62</a>
+</div>
 </div>
 
 <div class="content">
-
-    <h1>PTF Full Analysis Dashboard</h1>
-
-    <p>This dashboard displays full statistical analysis for all qualified Play the Future questions, including:
-       truth-aware summaries, mean & median plots, mechanism diagnostics, and Equation 6 feasibility.</p>
-
+    <h1>PTF Analysis Dashboard</h1>
+    <p>Complete analysis of Play the Future data based on Barrera-Lemarchand et al. (2024): 
+       "Promoting erroneous divergent opinions increases collective accuracy"</p>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">30</div>
+            <div class="stat-label">Questions Analyzed</div>
+        </div>
+        <div class="stat-card success">
+            <div class="stat-value">23</div>
+            <div class="stat-label">Extremization Improved</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">77%</div>
+            <div class="stat-label">Success Rate</div>
+        </div>
+    </div>
+    
+    <h2>Quick Navigation</h2>
+    <div class="nav-buttons">
+        <a href="findings.html">📊 Key Findings</a>
+        <a href="dpt_analysis.html">📈 DPT Analysis</a>
+        <a href="eq4_analysis.html">🔬 Equation 4</a>
+    </div>
+    
+    <h2>All Questions</h2>
+    
     <div class="search-box">
-        <input id="questionSearch" onkeyup="filterQuestions()" placeholder="Search for a question...">
+        <input type="text" id="questionSearch" onkeyup="filterQuestions()" 
+               placeholder="🔍 Search questions...">
     </div>
-
-    <h2>Questions</h2>
-
-    <div class="question-list">
-        <a class="q-card" href="Q03.html">Q03 — In HH:MM, how long will this year's WWDC keynote address be?</a>
-<a class="q-card" href="Q04.html">Q04 — Apple's WWDC starts next week!ðŸ™Œ What will the temperature be in San Jose at 10 PST on Monday?</a>
-<a class="q-card" href="Q05.html">Q05 — How many different people will present during the keynote this year?</a>
-<a class="q-card" href="Q11.html">Q11 — UK weather is so unpredictable! In °C, what will the temperature be tomorrow at 13:00 DST in London?</a>
-<a class="q-card" href="Q12.html">Q12 — How many likes will @Sothebys last Instagram post today get by 17:00 ET tomorrow?</a>
-<a class="q-card" href="Q14.html">Q14 — World Cup sponsor! What will McDonald's (MCD) stock close at on the NYSE tomorrow?</a>
-<a class="q-card" href="Q17.html">Q17 — Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday?</a>
-<a class="q-card" href="Q18.html">Q18 — Are you ready, Swifties? In °C, what will the temperature be at 9 AM local time in London tomorrow?</a>
-<a class="q-card" href="Q19.html">Q19 — Taylor's on tour! How many daily views will Taylor Swift's YouTube VEVO channel have on Monday?</a>
-<a class="q-card" href="Q20.html">Q20 — Big 5 Marathon! In °F, what will the temp. be at 11 AM local time in Pretoria, South Africa tomorrow?</a>
-<a class="q-card" href="Q21.html">Q21 — Race among the African wildlife! How many racers will finish this year's Big Five Marathon?</a>
-<a class="q-card" href="Q23.html">Q23 — Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.?</a>
-<a class="q-card" href="Q24.html">Q24 — GP sponsor! What will Pirelli's stock price be at close on Tuesday on the Milan Stock Exchange?</a>
-<a class="q-card" href="Q26.html">Q26 — What will the length of the newest video published on IMVDb be on Thurs. at 17:00 ET?</a>
-<a class="q-card" href="Q29.html">Q29 — What will the diff. in subscribers be for Ed Sheeran's YouTube channel be between Saturday & Sunday?</a>
-<a class="q-card" href="Q30.html">Q30 — What will the temperature be in Amsterdam at noon local time on Saturday?</a>
-<a class="q-card" href="Q32.html">Q32 — Movie magic! How much will the Top 10 films in North America gross at the box office on Monday?</a>
-<a class="q-card" href="Q35.html">Q35 — How many reacts will the last post on Mtl en Arts FB page on Tuesday get within 24 hrs?</a>
-<a class="q-card" href="Q37.html">Q37 — How many times will the letters VOGUE appear in the last tweet tweeted by @VogueParis by Tues. at 17:00 ET?</a>
-<a class="q-card" href="Q38.html">Q38 — Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London?</a>
-<a class="q-card" href="Q40.html">Q40 — In MM:SS what will the length of the newest YouTube video published on IMVDb.com be on Sunday at 11 ET?</a>
-<a class="q-card" href="Q41.html">Q41 — KICK! How many passes between players will be recorded during the Brazil vs. Belgium match on Friday?</a>
-<a class="q-card" href="Q45.html">Q45 — Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time?</a>
-<a class="q-card" href="Q47.html">Q47 — The Montreux Jazz Festival is starting! How much will $1 CAD be worth in CHF on Tuesday at 13:00 ET?</a>
-<a class="q-card" href="Q50.html">Q50 — Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.?</a>
-<a class="q-card" href="Q51.html">Q51 — World Cup semi-finals! How many passes will be kicked during the Croatia vs. England match on Wed.?</a>
-<a class="q-card" href="Q54.html">Q54 — Box office hits! In millions how much will the Top 12 movies gross during the upcoming weekend?</a>
-<a class="q-card" href="Q59.html">Q59 — Happy Anniversary Twitter! What will Twitter's stock price be on the NYSE at noon on Wednesday?</a>
-<a class="q-card" href="Q60.html">Q60 — World Cup Final TODAY! In Â°C what will the temperature be at 9 AM local time on Thursday in Moscow?</a>
-<a class="q-card" href="Q62.html">Q62 — Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be?</a>
+    
+    <div class="question-grid">
+        
+        <a class="q-card" href="Q03.html">
+            <div class="q-id">Q03</div>
+            <div class="q-text">In HH:MM, how long will this year&#x27;s WWDC keynote address be?...</div>
+            <div class="q-truth">Truth: 135.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q04.html">
+            <div class="q-id">Q04</div>
+            <div class="q-text">Apple&#x27;s WWDC starts next week!ðŸ™Œ What will the temperature be in San Jose at 1...</div>
+            <div class="q-truth">Truth: 66.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q05.html">
+            <div class="q-id">Q05</div>
+            <div class="q-text">How many different people will present during the keynote this year?...</div>
+            <div class="q-truth">Truth: 9.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q11.html">
+            <div class="q-id">Q11</div>
+            <div class="q-text">UK weather is so unpredictable! In °C, what will the temperature be tomorrow at ...</div>
+            <div class="q-truth">Truth: 23.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q12.html">
+            <div class="q-id">Q12</div>
+            <div class="q-text">How many likes will @Sothebys last Instagram post today get by 17:00 ET tomorrow...</div>
+            <div class="q-truth">Truth: 3110.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q14.html">
+            <div class="q-id">Q14</div>
+            <div class="q-text">World Cup sponsor! What will McDonald&#x27;s (MCD) stock close at on the NYSE tomorro...</div>
+            <div class="q-truth">Truth: 164.55</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q17.html">
+            <div class="q-id">Q17</div>
+            <div class="q-text">Happy Birthday, Prince William! How many words long will the last @RoyalFamily t...</div>
+            <div class="q-truth">Truth: 31.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q18.html">
+            <div class="q-id">Q18</div>
+            <div class="q-text">Are you ready, Swifties? In °C, what will the temperature be at 9 AM local time ...</div>
+            <div class="q-truth">Truth: 15.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q19.html">
+            <div class="q-id">Q19</div>
+            <div class="q-text">Taylor&#x27;s on tour! How many daily views will Taylor Swift&#x27;s YouTube VEVO channel ...</div>
+            <div class="q-truth">Truth: 4723825.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q20.html">
+            <div class="q-id">Q20</div>
+            <div class="q-text">Big 5 Marathon! In °F, what will the temp. be at 11 AM local time in Pretoria, S...</div>
+            <div class="q-truth">Truth: 67.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q21.html">
+            <div class="q-id">Q21</div>
+            <div class="q-text">Race among the African wildlife! How many racers will finish this year&#x27;s Big Fiv...</div>
+            <div class="q-truth">Truth: 127.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q23.html">
+            <div class="q-id">Q23</div>
+            <div class="q-text">Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 A...</div>
+            <div class="q-truth">Truth: 24.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q24.html">
+            <div class="q-id">Q24</div>
+            <div class="q-text">GP sponsor! What will Pirelli&#x27;s stock price be at close on Tuesday on the Milan ...</div>
+            <div class="q-truth">Truth: 7.25</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q26.html">
+            <div class="q-id">Q26</div>
+            <div class="q-text">What will the length of the newest video published on IMVDb be on Thurs. at 17:0...</div>
+            <div class="q-truth">Truth: 217.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q29.html">
+            <div class="q-id">Q29</div>
+            <div class="q-text">What will the diff. in subscribers be for Ed Sheeran&#x27;s YouTube channel be betwee...</div>
+            <div class="q-truth">Truth: 28210.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q30.html">
+            <div class="q-id">Q30</div>
+            <div class="q-text">What will the temperature be in Amsterdam at noon local time on Saturday?...</div>
+            <div class="q-truth">Truth: 73.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q32.html">
+            <div class="q-id">Q32</div>
+            <div class="q-text">Movie magic! How much will the Top 10 films in North America gross at the box of...</div>
+            <div class="q-truth">Truth: 24575462.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q35.html">
+            <div class="q-id">Q35</div>
+            <div class="q-text">How many reacts will the last post on Mtl en Arts FB page on Tuesday get within ...</div>
+            <div class="q-truth">Truth: 37.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q37.html">
+            <div class="q-id">Q37</div>
+            <div class="q-text">How many times will the letters VOGUE appear in the last tweet tweeted by @Vogue...</div>
+            <div class="q-truth">Truth: 18.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q38.html">
+            <div class="q-id">Q38</div>
+            <div class="q-text">Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wi...</div>
+            <div class="q-truth">Truth: 24.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q40.html">
+            <div class="q-id">Q40</div>
+            <div class="q-text">In MM:SS what will the length of the newest YouTube video published on IMVDb.com...</div>
+            <div class="q-truth">Truth: 228.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q41.html">
+            <div class="q-id">Q41</div>
+            <div class="q-text">KICK! How many passes between players will be recorded during the Brazil vs. Bel...</div>
+            <div class="q-truth">Truth: 927.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q45.html">
+            <div class="q-id">Q45</div>
+            <div class="q-text">Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris o...</div>
+            <div class="q-truth">Truth: 21.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q47.html">
+            <div class="q-id">Q47</div>
+            <div class="q-text">The Montreux Jazz Festival is starting! How much will $1 CAD be worth in CHF on ...</div>
+            <div class="q-truth">Truth: 0.7562</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q50.html">
+            <div class="q-id">Q50</div>
+            <div class="q-text">Country dream team! How many daily views will the TimandFaithVEVO channel on You...</div>
+            <div class="q-truth">Truth: 30963.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q51.html">
+            <div class="q-id">Q51</div>
+            <div class="q-text">World Cup semi-finals! How many passes will be kicked during the Croatia vs. Eng...</div>
+            <div class="q-truth">Truth: 1101.0</div>
+            <div class="q-status not-improved">✗ Not Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q54.html">
+            <div class="q-id">Q54</div>
+            <div class="q-text">Box office hits! In millions how much will the Top 12 movies gross during the up...</div>
+            <div class="q-truth">Truth: 157.3</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q59.html">
+            <div class="q-id">Q59</div>
+            <div class="q-text">Happy Anniversary Twitter! What will Twitter&#x27;s stock price be on the NYSE at noo...</div>
+            <div class="q-truth">Truth: 43.12</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q60.html">
+            <div class="q-id">Q60</div>
+            <div class="q-text">World Cup Final TODAY! In Â°C what will the temperature be at 9 AM local time on...</div>
+            <div class="q-truth">Truth: 21.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
+        <a class="q-card" href="Q62.html">
+            <div class="q-id">Q62</div>
+            <div class="q-text">Classical Music Festival! How many words long will the last tweet tweeted by @bb...</div>
+            <div class="q-truth">Truth: 14.0</div>
+            <div class="q-status improved">✓ Improved</div>
+        </a>
+    
     </div>
-
 </div>
 
-<script>
-/* SEARCH BAR FILTER */
-function filterQuestions() {
-    let query = document.getElementById("questionSearch").value.toLowerCase();
-    let cards = document.getElementsByClassName("q-card");
-
-    for (let card of cards) {
-        let text = card.innerText.toLowerCase();
-        card.style.display = text.includes(query) ? "block" : "none";
-    }
-}
-
-/* DARK MODE TOGGLE */
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.createElement("div");
-    btn.className = "theme-toggle";
-    btn.innerText = "Toggle Theme";
-    document.body.appendChild(btn);
-
-    btn.onclick = () => {
-        document.body.classList.toggle("dark");
-    };
-});
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

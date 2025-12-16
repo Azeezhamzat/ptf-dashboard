@@ -1,62 +1,114 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PTF Dashboard — Q38</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q38 — PTF Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .plot-description {
+            color: var(--text-faint);
+            font-size: 0.95em;
+            margin: -10px 0 15px 0;
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="sidebar">
-    <h2>PTF Dashboard</h2>
-    <a href="index.html">Home</a>
-    <a href="Q03.html">Q03</a>
-<a href="Q04.html">Q04</a>
-<a href="Q05.html">Q05</a>
-<a href="Q11.html">Q11</a>
-<a href="Q12.html">Q12</a>
-<a href="Q14.html">Q14</a>
-<a href="Q17.html">Q17</a>
-<a href="Q18.html">Q18</a>
-<a href="Q19.html">Q19</a>
-<a href="Q20.html">Q20</a>
-<a href="Q21.html">Q21</a>
-<a href="Q23.html">Q23</a>
-<a href="Q24.html">Q24</a>
-<a href="Q26.html">Q26</a>
-<a href="Q29.html">Q29</a>
-<a href="Q30.html">Q30</a>
-<a href="Q32.html">Q32</a>
-<a href="Q35.html">Q35</a>
-<a href="Q37.html">Q37</a>
-<a href="Q38.html">Q38</a>
-<a href="Q40.html">Q40</a>
-<a href="Q41.html">Q41</a>
-<a href="Q45.html">Q45</a>
-<a href="Q47.html">Q47</a>
-<a href="Q50.html">Q50</a>
-<a href="Q51.html">Q51</a>
-<a href="Q54.html">Q54</a>
-<a href="Q59.html">Q59</a>
-<a href="Q60.html">Q60</a>
-<a href="Q62.html">Q62</a>
+    <h2>📊 PTF Dashboard</h2>
+    <div class="subtitle">Barrera-Lemarchand Analysis</div>
+    <div class="sidebar-section">
+  <h3>Overview</h3>
+  <a href="index.html">🏠 Home</a>
+  <a href="findings.html">📊 Key Findings</a>
+  <a href="dpt_analysis.html">📈 DPT Analysis</a>
+  <a href="eq4_analysis.html">🔬 Equation 4</a>
+</div>
+<div class="sidebar-section">
+  <h3>Questions</h3>
+  <a href="Q03.html">Q03</a>
+  <a href="Q04.html">Q04</a>
+  <a href="Q05.html">Q05</a>
+  <a href="Q11.html">Q11</a>
+  <a href="Q12.html">Q12</a>
+  <a href="Q14.html">Q14</a>
+  <a href="Q17.html">Q17</a>
+  <a href="Q18.html">Q18</a>
+  <a href="Q19.html">Q19</a>
+  <a href="Q20.html">Q20</a>
+  <a href="Q21.html">Q21</a>
+  <a href="Q23.html">Q23</a>
+  <a href="Q24.html">Q24</a>
+  <a href="Q26.html">Q26</a>
+  <a href="Q29.html">Q29</a>
+  <a href="Q30.html">Q30</a>
+  <a href="Q32.html">Q32</a>
+  <a href="Q35.html">Q35</a>
+  <a href="Q37.html">Q37</a>
+  <a href="Q38.html" class="active">Q38</a>
+  <a href="Q40.html">Q40</a>
+  <a href="Q41.html">Q41</a>
+  <a href="Q45.html">Q45</a>
+  <a href="Q47.html">Q47</a>
+  <a href="Q50.html">Q50</a>
+  <a href="Q51.html">Q51</a>
+  <a href="Q54.html">Q54</a>
+  <a href="Q59.html">Q59</a>
+  <a href="Q60.html">Q60</a>
+  <a href="Q62.html">Q62</a>
+</div>
 </div>
 
 <div class="content">
-
     <div class="nav-buttons">
         <a href="Q37.html">← Previous</a>
+        <a href="index.html">🏠 Home</a>
         <a href="Q40.html">Next →</a>
     </div>
-
-    <h1>Question Q38</h1>
-    <h2 style="margin-top:-10px; color:#555;">Truth = 24.0</h2>
-
-    <div class="summary-container">
-        <div class="summary-header">Show/Hide Super Summary</div>
-        <pre class="summary">================================================================================
+    
+    <h1>Q38</h1>
+    <p style="font-size: 1.1em; color: var(--text-faint); margin-bottom: 20px;">Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London?</p>
+    
+    
+    <div class="card">
+        <div class="card-header">📋 Question Details</div>
+        <table class="data-table" style="margin: 10px 0;">
+            <tr><td><strong>Truth (θ)</strong></td><td>24.0</td></tr>
+            <tr><td><strong>Low Anchor</strong></td><td>12.0</td></tr>
+            <tr><td><strong>High Anchor</strong></td><td>27.0</td></tr>
+        </table>
+    </div>
+    
+    
+    
+            <div class="card">
+                <div class="card-header">📈 DPT Analysis Summary</div>
+                <div class="stats-grid" style="margin-top: 10px;">
+                    <div class="stat-card danger" style="padding: 12px;">
+                        <div class="stat-value" style="font-size: 1.5em;">✗ No</div>
+                        <div class="stat-label">Extremization Improved</div>
+                    </div>
+                    <div class="stat-card" style="padding: 12px;">
+                        <div class="stat-value" style="font-size: 1.2em;">δ↓ ε↓ E↑</div>
+                        <div class="stat-label">Mechanism</div>
+                    </div>
+                    <div class="stat-card" style="padding: 12px;">
+                        <div class="stat-value" style="font-size: 1.2em;">High</div>
+                        <div class="stat-label">Best Condition</div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9em; color: var(--text-faint);">
+                    E_control = 3.2200 → E_extremized = 23.5014
+                </p>
+            </div>
+            
+    
+    <div class="collapsible">
+        <div class="collapsible-header">📋 Full Super Summary (click to expand)</div>
+        <div class="collapsible-content">
+            <pre>================================================================================
 QUESTION Q38: 05_Export_0713_stats_F61pu4lGWj.csv
 Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London?
 Truth = 24.0
@@ -98,41 +150,61 @@ INTERPRETATION — MEAN AGGREGATION
 ================================================================================
 Mean-based collective error changed by 141.95% relative to the true value 24.0. Scenario=δ:down, ε:up, E:up. Equation 6 feasibility=True.
 ================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 3.0000 → 5.0000 (66.67%)
+  Median ε: 3.0000 → 5.0000 (66.67%)
+  Median δ: 2.0000 → 3.0000 (50.00%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (24.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:up
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 24.0.
+================================================================================
 </pre>
+        </div>
     </div>
-
-    <h2>Mean-Based Plot</h2>
-    <img src="plots/mean/plot_38.png">
-
-    <h2>Mean Mechanism Plot</h2>
-    <img src="plots/mechanism/mechanism_38.png">
-
-    <h2>Median-Based Plot</h2>
-    <img src="plots/median/plot_median_Q38.png">
-
-    <h2>Median Mechanism Plot</h2>
-    <img src="plots/median_mechanism/mechanism_median_Q38.png">
-
+    
+    
+        <h2>📊 Mean-Based Barrera Analysis</h2>
+        <p class="plot-description">Distribution comparison showing Control vs Low Anchor vs High Anchor conditions 
+        with error analysis using mean estimates. This replicates the B-L methodology.</p>
+        <div class="plot-container">
+            <img src="plots/mean/plot_38.png" alt="Mean-Based Barrera Plot for Q38">
+        </div>
+        
+        <h2>🔬 Mechanism Analysis</h2>
+        <p class="plot-description">Decomposition of collective error into individual error (ε) and diversity (δ).</p>
+        
+            <h3>Main Mechanism (ε-δ Decomposition)</h3>
+            <div class="plot-container">
+                <img src="plots/mechanism/mechanism_main_Q38.png" alt="Main Mechanism (ε-δ Decomposition) for Q38">
+            </div>
+            
+            <h3>Anchor Shift Analysis</h3>
+            <div class="plot-container">
+                <img src="plots/mechanism/mechanism_anchor_shift_Q38.png" alt="Anchor Shift Analysis for Q38">
+            </div>
+            
+        <h2>📈 Median-Based Analysis</h2>
+        <p class="plot-description">Robustness check using median estimates (less sensitive to outliers).</p>
+        
+            <h3>Median Distribution Analysis</h3>
+            <div class="plot-container">
+                <img src="plots/median/plot_median_Q38.png" alt="Median Distribution Analysis for Q38">
+            </div>
+            
+            <h3>Median Mechanism Analysis</h3>
+            <div class="plot-container">
+                <img src="plots/median_mechanism/mechanism_median_Q38.png" alt="Median Mechanism Analysis for Q38">
+            </div>
+            
 </div>
 
-<script>
-/* COLLAPSIBLE SUMMARY */
-document.querySelectorAll('.summary-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const p = header.nextElementSibling;
-        p.classList.toggle('open');
-    });
-});
-
-/* DARK MODE TOGGLE */
-document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.createElement('div');
-    btn.className = 'theme-toggle';
-    btn.innerText = 'Toggle Theme';
-    document.body.appendChild(btn);
-    btn.onclick = () => document.body.classList.toggle('dark');
-});
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

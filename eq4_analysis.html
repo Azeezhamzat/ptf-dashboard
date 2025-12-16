@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation 4 Analysis — PTF Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>📊 PTF Dashboard</h2>
+    <div class="subtitle">Barrera-Lemarchand Analysis</div>
+    <div class="sidebar-section">
+  <h3>Overview</h3>
+  <a href="index.html">🏠 Home</a>
+  <a href="findings.html">📊 Key Findings</a>
+  <a href="dpt_analysis.html">📈 DPT Analysis</a>
+  <a href="eq4_analysis.html" class="active">🔬 Equation 4</a>
+</div>
+<div class="sidebar-section">
+  <h3>Questions</h3>
+  <a href="Q03.html">Q03</a>
+  <a href="Q04.html">Q04</a>
+  <a href="Q05.html">Q05</a>
+  <a href="Q11.html">Q11</a>
+  <a href="Q12.html">Q12</a>
+  <a href="Q14.html">Q14</a>
+  <a href="Q17.html">Q17</a>
+  <a href="Q18.html">Q18</a>
+  <a href="Q19.html">Q19</a>
+  <a href="Q20.html">Q20</a>
+  <a href="Q21.html">Q21</a>
+  <a href="Q23.html">Q23</a>
+  <a href="Q24.html">Q24</a>
+  <a href="Q26.html">Q26</a>
+  <a href="Q29.html">Q29</a>
+  <a href="Q30.html">Q30</a>
+  <a href="Q32.html">Q32</a>
+  <a href="Q35.html">Q35</a>
+  <a href="Q37.html">Q37</a>
+  <a href="Q38.html">Q38</a>
+  <a href="Q40.html">Q40</a>
+  <a href="Q41.html">Q41</a>
+  <a href="Q45.html">Q45</a>
+  <a href="Q47.html">Q47</a>
+  <a href="Q50.html">Q50</a>
+  <a href="Q51.html">Q51</a>
+  <a href="Q54.html">Q54</a>
+  <a href="Q59.html">Q59</a>
+  <a href="Q60.html">Q60</a>
+  <a href="Q62.html">Q62</a>
+</div>
+</div>
+
+<div class="content">
+    <div class="nav-buttons">
+        <a href="index.html">← Back to Home</a>
+    </div>
+    
+    <h1>🔬 Equation 4 Analysis</h1>
+    <h2 style="color: var(--text-faint);">θ (Truth) vs μ₀ (Control Mean) as Reference</h2>
+    
+    <div class="card">
+        <div class="card-header">The Anchoring Model</div>
+        <p><strong>w = w₀ × exp(-β × distance)</strong></p>
+        <ul>
+            <li><strong>θ reference</strong>: distance = |Anchor - Truth| (B-L original)</li>
+            <li><strong>μ₀ reference</strong>: distance = |Anchor - Control Mean| (Our alternative)</li>
+        </ul>
+        <p><strong>Practical advantage:</strong> μ₀ can be computed without knowing the truth!</p>
+    </div>
+    
+    <h2>Comparison Results</h2>
+    
+    <table class="data-table">
+        <tr>
+            <th>Reference</th>
+            <th>Pearson r</th>
+            <th>p-value</th>
+            <th>Direction</th>
+        </tr>
+    
+        <tr>
+            <td>θ (Truth)</td>
+            <td>-0.1636</td>
+            <td>0.224</td>
+            <td><span class="badge success">Negative ✓</span></td>
+        </tr>
+        
+        <tr>
+            <td>μ₀ (Control Mean)</td>
+            <td>+0.1943</td>
+            <td>0.1476</td>
+            <td><span class="badge danger">Positive ✗</span></td>
+        </tr>
+        </table>
+    
+    <h2>Visualization</h2>
+    <div class="plot-container"><img src="plots/eq4/equation4_comparison.png" alt="Equation 4 Comparison"></div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
