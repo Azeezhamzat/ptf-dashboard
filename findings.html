@@ -1,21 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Key Findings — PTF Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="sidebar">
     <h2>📊 PTF Dashboard</h2>
     <div class="subtitle">Barrera-Lemarchand Analysis</div>
     <div class="sidebar-section">
   <h3>Overview</h3>
   <a href="index.html">🏠 Home</a>
-  <a href="findings.html" class="active">📊 Key Findings</a>
+  <a href="findings.html"class="active">📊 Key Findings</a>
   <a href="dpt_analysis.html">📈 DPT Analysis</a>
   <a href="eq4_analysis.html">🔬 Equation 4</a>
 </div>
@@ -53,20 +50,15 @@
   <a href="Q62.html">Q62</a>
 </div>
 </div>
-
 <div class="content">
-    <div class="nav-buttons">
-        <a href="index.html">← Back to Home</a>
-    </div>
-    
+    <div class="nav-buttons"><a href="index.html">← Back to Home</a></div>
     <h1>📊 Key Findings Summary</h1>
-    
     <div class="card">
-        <pre style="white-space: pre-wrap; font-family: monospace;">======================================================================
+        <pre style="white-space: pre-wrap;">======================================================================
   PTF ANALYSIS: KEY FINDINGS SUMMARY
 ======================================================================
 
-Generated: 2025-12-16 21:19:36
+Generated: 2025-12-22 17:56:34
 
 ──────────────────────────────────────────────────────────────────────
 DIVERSITY PREDICTION THEOREM (DPT) ANALYSIS
@@ -74,15 +66,25 @@ DIVERSITY PREDICTION THEOREM (DPT) ANALYSIS
 
   Questions analyzed: 30
 
-  EXTREMIZATION SUCCESS (E_ext < E_ctrl):
+  EXTREMIZATION SUCCESS (E_ext &lt; E_ctrl):
     23/30 questions (76.7%)
 
-  B-L MECHANISM (Δδ > Δε AND E↓):
+  B-L MECHANISM (Δδ &gt; Δε AND E↓):
     23/30 questions (76.7%)
 
   CONTROL BIAS PREDICTION ACCURACY:
     28/30 (93.33333333333333%)
-    Rule: 'If control biased HIGH → LOW anchor wins'
+    Rule: &#x27;If control overestimates → LOW anchor wins&#x27;
+
+  EQUATION 6 FEASIBILITY PREDICTION:
+    22/30 (73.33333333333333%)
+
+  MECHANISM DISTRIBUTION (Extremized):
+    Calibration: 19/30 (63.3%)
+    Wrong-Center Compression: 5/30 (16.7%)
+    B-L Extremization: 4/30 (13.3%)
+    Backfire: 1/30 (3.3%)
+    Harmful Divergence: 1/30 (3.3%)
 
 ──────────────────────────────────────────────────────────────────────
 EQUATION 4 ANALYSIS (θ vs μ₀ REFERENCE)
@@ -102,12 +104,19 @@ EQUATION 4 ANALYSIS (θ vs μ₀ REFERENCE)
     θ (Truth): Requires knowing true answer (post-hoc only)
     μ₀ (Control Mean): Can be computed without truth ✓
 
+──────────────────────────────────────────────────────────────────────
+BEST CONDITION DISTRIBUTION
+──────────────────────────────────────────────────────────────────────
+  Low: 14/30 (46.7%)
+  High: 9/30 (30.0%)
+  Extremized: 6/30 (20.0%)
+  Control: 1/30 (3.3%)
+
 ======================================================================
   END OF KEY FINDINGS
 ======================================================================</pre>
     </div>
 </div>
-
 <script src="js/main.js"></script>
 </body>
 </html>

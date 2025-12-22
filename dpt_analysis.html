@@ -1,22 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPT Analysis — PTF Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="sidebar">
     <h2>📊 PTF Dashboard</h2>
     <div class="subtitle">Barrera-Lemarchand Analysis</div>
     <div class="sidebar-section">
   <h3>Overview</h3>
   <a href="index.html">🏠 Home</a>
-  <a href="findings.html">📊 Key Findings</a>
-  <a href="dpt_analysis.html" class="active">📈 DPT Analysis</a>
+  <!-- <a href="findings.html">📊 Key Findings</a> -->
+  <a href="dpt_analysis.html"class="active">📈 DPT Analysis</a>
   <a href="eq4_analysis.html">🔬 Equation 4</a>
 </div>
 <div class="sidebar-section">
@@ -53,37 +50,39 @@
   <a href="Q62.html">Q62</a>
 </div>
 </div>
-
 <div class="content">
-    <div class="nav-buttons">
-        <a href="index.html">← Back to Home</a>
-    </div>
-    
+    <div class="nav-buttons"><a href="index.html">← Back to Home</a></div>
     <h1>📈 Diversity Prediction Theorem Analysis</h1>
     
     <div class="card">
-        <div class="card-header">The DPT Identity</div>
+        <div class="card-header">The DPT Identity (SQUARED ERRORS)</div>
         <p><strong>E = ε - δ</strong></p>
         <ul>
             <li><strong>E</strong> = Collective error = (μ - θ)²</li>
-            <li><strong>ε</strong> = Mean individual error = mean((xᵢ - θ)²)</li>
-            <li><strong>δ</strong> = Predictive diversity = variance</li>
+            <li><strong>ε</strong> = Mean individual error = mean((xᵢ - θ)²) = MSE</li>
+            <li><strong>δ</strong> = Predictive diversity = var(x)</li>
         </ul>
-        <p>The B-L hypothesis: Anchoring increases both ε and δ, but Δδ > Δε → E decreases</p>
+        <p>B-L hypothesis: Anchoring increases both ε and δ, but Δδ > Δε → E decreases</p>
     </div>
     
     <h2>Results</h2>
     
+        <h3>Identity Verification</h3>
         <div class="plot-container">
-            <img src="plots/dpt/dpt_bl_hypothesis_test.png" alt="dpt_bl_hypothesis_test.png">
+            <img src="plots/dpt/dpt_identity_verification.png" alt="Identity Verification">
         </div>
         
+        <h3>Bl Hypothesis Test</h3>
         <div class="plot-container">
-            <img src="plots/dpt/dpt_mechanism_distribution.png" alt="dpt_mechanism_distribution.png">
+            <img src="plots/dpt/dpt_bl_hypothesis_test.png" alt="Bl Hypothesis Test">
+        </div>
+        
+        <h3>Mechanism Distribution</h3>
+        <div class="plot-container">
+            <img src="plots/dpt/dpt_mechanism_distribution.png" alt="Mechanism Distribution">
         </div>
         
 </div>
-
 <script src="js/main.js"></script>
 </body>
 </html>

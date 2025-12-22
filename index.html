@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="sidebar">
     <h2>📊 PTF Dashboard</h2>
     <div class="subtitle">Barrera-Lemarchand Analysis</div>
     <div class="sidebar-section">
   <h3>Overview</h3>
-  <a href="index.html" class="active">🏠 Home</a>
-  <a href="findings.html">📊 Key Findings</a>
-  <a href="dpt_analysis.html">📈 DPT Analysis</a>
+  <a href="index.html"class="active">🏠 Home</a>
+  <!-- <a href="findings.html">📊 Key Findings</a> -->
+  <!-- <a href="dpt_analysis.html">📈 DPT Analysis</a> -->
   <a href="eq4_analysis.html">🔬 Equation 4</a>
 </div>
 <div class="sidebar-section">
@@ -53,11 +51,9 @@
   <a href="Q62.html">Q62</a>
 </div>
 </div>
-
 <div class="content">
     <h1>PTF Analysis Dashboard</h1>
-    <p>Complete analysis of Play the Future data based on Barrera-Lemarchand et al. (2024): 
-       "Promoting erroneous divergent opinions increases collective accuracy"</p>
+    <p>Analysis of Play the Future data based on Barrera-Lemarchand et al. (2024)</p>
     
     <div class="stats-grid">
         <div class="stat-card">
@@ -76,20 +72,18 @@
     
     <h2>Quick Navigation</h2>
     <div class="nav-buttons">
-        <a href="findings.html">📊 Key Findings</a>
-        <a href="dpt_analysis.html">📈 DPT Analysis</a>
+        <!-- <a href="findings.html">📊 Key Findings</a> -->
+        <!-- <a href="dpt_analysis.html">📈 DPT Analysis</a> -->
         <a href="eq4_analysis.html">🔬 Equation 4</a>
     </div>
     
     <h2>All Questions</h2>
-    
-    <div class="search-box">
+    <div class="search-box" style="margin: 20px 0;">
         <input type="text" id="questionSearch" onkeyup="filterQuestions()" 
-               placeholder="🔍 Search questions...">
+               placeholder="🔍 Search questions..." style="width: 100%; max-width: 500px; padding: 12px; border-radius: 25px; border: 2px solid var(--border);">
     </div>
     
     <div class="question-grid">
-        
         <a class="q-card" href="Q03.html">
             <div class="q-id">Q03</div>
             <div class="q-text">In HH:MM, how long will this year&#x27;s WWDC keynote address be?...</div>
@@ -299,10 +293,8 @@
             <div class="q-truth">Truth: 14.0</div>
             <div class="q-status improved">✓ Improved</div>
         </a>
-    
     </div>
 </div>
-
 <script src="js/main.js"></script>
 </body>
 </html>
