@@ -1,14 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equation 4 Analysis — PTF Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="sidebar">
     <h2>📊 PTF Dashboard</h2>
     <div class="subtitle">Barrera-Lemarchand Analysis</div>
@@ -17,7 +14,7 @@
   <a href="index.html">🏠 Home</a>
   <a href="findings.html">📊 Key Findings</a>
   <a href="dpt_analysis.html">📈 DPT Analysis</a>
-  <a href="eq4_analysis.html" class="active">🔬 Equation 4</a>
+  <a href="eq4_analysis.html"class="active">🔬 Equation 4</a>
 </div>
 <div class="sidebar-section">
   <h3>Questions</h3>
@@ -53,14 +50,12 @@
   <a href="Q62.html">Q62</a>
 </div>
 </div>
-
 <div class="content">
-    <div class="nav-buttons">
-        <a href="index.html">← Back to Home</a>
-    </div>
+    <div class="nav-buttons"><a href="index.html">← Back to Home</a></div>
+    <h1>🔬 θ vs μ₀ Analysis</h1>
     
-    <h1>🔬 Equation 4 Analysis</h1>
-    <h2 style="color: var(--text-faint);">θ (Truth) vs μ₀ (Control Mean) as Reference</h2>
+    <h2>θ (Truth) vs μ₀ (Control Mean) as Reference</h2>
+    # <h2 style="color: var(--text-faint);">θ (Truth) vs μ₀ (Control Mean) as Reference</h2>
     
     <div class="card">
         <div class="card-header">The Anchoring Model</div>
@@ -73,34 +68,11 @@
     </div>
     
     <h2>Comparison Results</h2>
-    
-    <table class="data-table">
-        <tr>
-            <th>Reference</th>
-            <th>Pearson r</th>
-            <th>p-value</th>
-            <th>Direction</th>
-        </tr>
-    
-        <tr>
-            <td>θ (Truth)</td>
-            <td>-0.1636</td>
-            <td>0.224</td>
-            <td><span class="badge success">Negative ✓</span></td>
-        </tr>
-        
-        <tr>
-            <td>μ₀ (Control Mean)</td>
-            <td>+0.1943</td>
-            <td>0.1476</td>
-            <td><span class="badge danger">Positive ✗</span></td>
-        </tr>
-        </table>
+    <table class="data-table"><tr><th>Reference</th><th>Pearson r</th><th>p-value</th><th>Direction</th></tr><tr><td>θ (Truth)</td><td>-0.1636</td><td>0.224</td><td>Negative</td></tr><tr><td>μ₀ (Control Mean)</td><td>+0.1943</td><td>0.1476</td><td>Positive</td></tr></table>
     
     <h2>Visualization</h2>
     <div class="plot-container"><img src="plots/eq4/equation4_comparison.png" alt="Equation 4 Comparison"></div>
 </div>
-
 <script src="js/main.js"></script>
 </body>
 </html>
