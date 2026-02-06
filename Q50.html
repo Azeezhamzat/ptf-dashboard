@@ -1,154 +1,281 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q50 — PTF Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .plot-description {
-            color: var(--text-faint);
-            font-size: 0.95em;
-            margin: -10px 0 15px 0;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q50 — PTF Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="app">
+    <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="brand">
+        <h1>PTF Dashboard</h1>
+        <p>Barrera-Lemarchand style + extensions</p>
+      </div>
 
-<div class="sidebar">
-    <h2>📊 PTF Dashboard</h2>
-    <div class="subtitle">Barrera-Lemarchand Analysis</div>
-    <div class="sidebar-section">
-  <h3>Overview</h3>
-  <a href="index.html">🏠 Home</a>
-  <a href="findings.html">📊 Key Findings</a>
-  <a href="dpt_analysis.html">📈 DPT Analysis</a>
-  <a href="eq4_analysis.html">🔬 Equation 4</a>
-</div>
-<div class="sidebar-section">
-  <h3>Questions</h3>
-  <a href="Q03.html">Q03</a>
-  <a href="Q04.html">Q04</a>
-  <a href="Q05.html">Q05</a>
-  <a href="Q11.html">Q11</a>
-  <a href="Q12.html">Q12</a>
-  <a href="Q14.html">Q14</a>
-  <a href="Q17.html">Q17</a>
-  <a href="Q18.html">Q18</a>
-  <a href="Q19.html">Q19</a>
-  <a href="Q20.html">Q20</a>
-  <a href="Q21.html">Q21</a>
-  <a href="Q23.html">Q23</a>
-  <a href="Q24.html">Q24</a>
-  <a href="Q26.html">Q26</a>
-  <a href="Q29.html">Q29</a>
-  <a href="Q30.html">Q30</a>
-  <a href="Q32.html">Q32</a>
-  <a href="Q35.html">Q35</a>
-  <a href="Q37.html">Q37</a>
-  <a href="Q38.html">Q38</a>
-  <a href="Q40.html">Q40</a>
-  <a href="Q41.html">Q41</a>
-  <a href="Q45.html">Q45</a>
-  <a href="Q47.html">Q47</a>
-  <a href="Q50.html" class="active">Q50</a>
-  <a href="Q51.html">Q51</a>
-  <a href="Q54.html">Q54</a>
-  <a href="Q59.html">Q59</a>
-  <a href="Q60.html">Q60</a>
-  <a href="Q62.html">Q62</a>
-</div>
-</div>
+      <div class="side-controls">
+        <div class="search">
+          <span class="icon">🔎</span>
+          <input id="qSearch" type="text" placeholder="Filter questions…" onkeyup="filterQuestions()">
+        </div>
+        <button class="btn" id="themeBtn">🌙 Dark</button>
+      </div>
 
-<div class="content">
-    <div class="nav-buttons">
-        <a href="Q47.html">← Previous</a>
-        <a href="index.html">🏠 Home</a>
-        <a href="Q51.html">Next →</a>
+      <div class="side-scroll">
+        
+        <div class="side-section" id="sec_overview">
+          <h3 data-section-toggle="1" data-target="sec_overview">
+            <span>Overview</span>
+            <span>▾</span>
+          </h3>
+          <div class="items">
+      <a class="navlink " href="index.html"><span>Overview</span><span class="badge">Home</span></a>
+      <a class="navlink " href="findings.html"><span>Key Findings</span><span class="badge">Text</span></a>
+      <a class="navlink " href="dpt_analysis.html"><span>DPT Analysis</span><span class="badge">Plots</span></a>
+      <a class="navlink " href="eq4_analysis.html"><span>Equation 4</span><span class="badge">Plots</span></a>
+      <a class="navlink " href="reports.html"><span>Reports</span><span class="badge">TXT</span></a>
     </div>
-    
+        </div>
+        
+        
+        <div class="side-section" id="sec_questions">
+          <h3 data-section-toggle="1" data-target="sec_questions">
+            <span>Questions</span>
+            <span>▾</span>
+          </h3>
+          <div class="items"><a class="navlink " href="Q03.html" data-qcard="1"
+                 data-qtext="Q03 In HH:MM, how long will this year&#x27;s WWDC keynote address be? Improved">
+                 <span>Q03</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q04.html" data-qcard="1"
+                 data-qtext="Q04 Apple&#x27;s WWDC starts next week!ðŸ™Œ What will the temperature be in San Jose at 10 PST on Monday? Improved">
+                 <span>Q04</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q05.html" data-qcard="1"
+                 data-qtext="Q05 How many different people will present during the keynote this year? Improved">
+                 <span>Q05</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q11.html" data-qcard="1"
+                 data-qtext="Q11 UK weather is so unpredictable! In °C, what will the temperature be tomorrow at 13:00 DST in London? Improved">
+                 <span>Q11</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q12.html" data-qcard="1"
+                 data-qtext="Q12 How many likes will @Sothebys last Instagram post today get by 17:00 ET tomorrow? Improved">
+                 <span>Q12</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q14.html" data-qcard="1"
+                 data-qtext="Q14 World Cup sponsor! What will McDonald&#x27;s (MCD) stock close at on the NYSE tomorrow? Improved">
+                 <span>Q14</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q17.html" data-qcard="1"
+                 data-qtext="Q17 Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday? Improved">
+                 <span>Q17</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q18.html" data-qcard="1"
+                 data-qtext="Q18 Are you ready, Swifties? In °C, what will the temperature be at 9 AM local time in London tomorrow? Improved">
+                 <span>Q18</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q19.html" data-qcard="1"
+                 data-qtext="Q19 Taylor&#x27;s on tour! How many daily views will Taylor Swift&#x27;s YouTube VEVO channel have on Monday? Improved">
+                 <span>Q19</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q20.html" data-qcard="1"
+                 data-qtext="Q20 Big 5 Marathon! In °F, what will the temp. be at 11 AM local time in Pretoria, South Africa tomorrow? Not improved">
+                 <span>Q20</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q21.html" data-qcard="1"
+                 data-qtext="Q21 Race among the African wildlife! How many racers will finish this year&#x27;s Big Five Marathon? Improved">
+                 <span>Q21</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q23.html" data-qcard="1"
+                 data-qtext="Q23 Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.? Improved">
+                 <span>Q23</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q24.html" data-qcard="1"
+                 data-qtext="Q24 GP sponsor! What will Pirelli&#x27;s stock price be at close on Tuesday on the Milan Stock Exchange? Improved">
+                 <span>Q24</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q26.html" data-qcard="1"
+                 data-qtext="Q26 What will the length of the newest video published on IMVDb be on Thurs. at 17:00 ET? Improved">
+                 <span>Q26</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q29.html" data-qcard="1"
+                 data-qtext="Q29 What will the diff. in subscribers be for Ed Sheeran&#x27;s YouTube channel be between Saturday &amp; Sunday? Not improved">
+                 <span>Q29</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q30.html" data-qcard="1"
+                 data-qtext="Q30 What will the temperature be in Amsterdam at noon local time on Saturday? Improved">
+                 <span>Q30</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q32.html" data-qcard="1"
+                 data-qtext="Q32 Movie magic! How much will the Top 10 films in North America gross at the box office on Monday? Improved">
+                 <span>Q32</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q35.html" data-qcard="1"
+                 data-qtext="Q35 How many reacts will the last post on Mtl en Arts FB page on Tuesday get within 24 hrs? Improved">
+                 <span>Q35</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q37.html" data-qcard="1"
+                 data-qtext="Q37 How many times will the letters VOGUE appear in the last tweet tweeted by @VogueParis by Tues. at 17:00 ET? Improved">
+                 <span>Q37</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q38.html" data-qcard="1"
+                 data-qtext="Q38 Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London? Not improved">
+                 <span>Q38</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q40.html" data-qcard="1"
+                 data-qtext="Q40 In MM:SS what will the length of the newest YouTube video published on IMVDb.com be on Sunday at 11 ET? Not improved">
+                 <span>Q40</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q41.html" data-qcard="1"
+                 data-qtext="Q41 KICK! How many passes between players will be recorded during the Brazil vs. Belgium match on Friday? Improved">
+                 <span>Q41</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q45.html" data-qcard="1"
+                 data-qtext="Q45 Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time? Not improved">
+                 <span>Q45</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q47.html" data-qcard="1"
+                 data-qtext="Q47 The Montreux Jazz Festival is starting! How much will $1 CAD be worth in CHF on Tuesday at 13:00 ET? Improved">
+                 <span>Q47</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink active" href="Q50.html" data-qcard="1"
+                 data-qtext="Q50 Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.? Not improved">
+                 <span>Q50</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q51.html" data-qcard="1"
+                 data-qtext="Q51 World Cup semi-finals! How many passes will be kicked during the Croatia vs. England match on Wed.? Not improved">
+                 <span>Q51</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q54.html" data-qcard="1"
+                 data-qtext="Q54 Box office hits! In millions how much will the Top 12 movies gross during the upcoming weekend? Improved">
+                 <span>Q54</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q59.html" data-qcard="1"
+                 data-qtext="Q59 Happy Anniversary Twitter! What will Twitter&#x27;s stock price be on the NYSE at noon on Wednesday? Improved">
+                 <span>Q59</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q60.html" data-qcard="1"
+                 data-qtext="Q60 World Cup Final TODAY! In Â°C what will the temperature be at 9 AM local time on Thursday in Moscow? Improved">
+                 <span>Q60</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q62.html" data-qcard="1"
+                 data-qtext="Q62 Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be? Improved">
+                 <span>Q62</span><span class="badge ok">Improved</span>
+                </a></div>
+        </div>
+        
+      </div>
+    </div>
+    </aside>
+    <main class="content">
+      <div class="container">
+        <div class="topbar">
+          <button class="btn" id="menuBtn">☰ Menu</button>
+          <div class="pill">Q50 — PTF Dashboard</div>
+        </div>
+
+        
     <h1>Q50</h1>
-    <p style="font-size: 1.1em; color: var(--text-faint); margin-bottom: 20px;">Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.?</p>
-    
-    
+    <p class="muted">Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.?</p>
+
     <div class="card">
-        <div class="card-header">📋 Question Details</div>
-        <table class="data-table" style="margin: 10px 0;">
-            <tr><td><strong>Truth (θ)</strong></td><td>30963.0</td></tr>
-            <tr><td><strong>Low Anchor</strong></td><td>25754.0</td></tr>
-            <tr><td><strong>High Anchor</strong></td><td>32253.0</td></tr>
-        </table>
+      <h2 style="margin-top:0;">Question details</h2>
+      <table class="kv">
+        <tr><td>Truth (θ)</td><td>30963.0</td></tr>
+        <tr><td>Low anchor</td><td>25754.0</td></tr>
+        <tr><td>High anchor</td><td>32253.0</td></tr>
+      </table>
     </div>
-    
-    
+
     
             <div class="card">
-                <div class="card-header">📈 DPT Analysis Summary</div>
-                <div class="stats-grid" style="margin-top: 10px;">
-                    <div class="stat-card danger" style="padding: 12px;">
-                        <div class="stat-value" style="font-size: 1.5em;">✗ No</div>
-                        <div class="stat-label">Extremization Improved</div>
-                    </div>
-                    <div class="stat-card" style="padding: 12px;">
-                        <div class="stat-value" style="font-size: 1.2em;">δ↓ ε↓ E↑</div>
-                        <div class="stat-label">Mechanism</div>
-                    </div>
-                    <div class="stat-card" style="padding: 12px;">
-                        <div class="stat-value" style="font-size: 1.2em;">High</div>
-                        <div class="stat-label">Best Condition</div>
-                    </div>
-                </div>
-                <p style="margin-top: 15px; font-size: 0.9em; color: var(--text-faint);">
-                    E_control = 920509.1000 → E_extremized = 5759680.0044
-                </p>
+              <h2 style="margin-top:0;">Verdict</h2>
+              <div class="grid3">
+                <div class="stat"><div class="k">Extremization improved?</div><div class="v"><span class="badge no">NO</span></div></div>
+                <div class="stat"><div class="k">Mechanism</div><div class="v" style="font-size:1.05rem;">Check (δ↓ ε↓)</div></div>
+                <div class="stat"><div class="k">Best condition</div><div class="v" style="font-size:1.05rem;">High</div></div>
+              </div>
+              <p class="muted" style="margin-top:10px;">E_ctrl = 9.2051e+05 → E_ext = 5.7597e+06</p>
             </div>
             
+
+    <h2>Plots</h2>
     
-    <div class="collapsible">
-        <div class="collapsible-header">📋 Full Super Summary (click to expand)</div>
-        <div class="collapsible-content">
-            <pre>================================================================================
+        <div class="plot">
+          <img src="plots/mean/plot_50.png" alt="Mean-based Barrera curve (Control vs Extremized)">
+          <div class="cap">Mean-based Barrera curve (Control vs Extremized)</div>
+        </div>
+        
+        <div class="plot">
+          <img src="plots/mechanism/mechanism_main_Q50.png" alt="Mechanism: main panel">
+          <div class="cap">Mechanism: main panel</div>
+        </div>
+        
+        <div class="plot">
+          <img src="plots/mechanism/mechanism_anchor_shift_Q50.png" alt="Mechanism: anchor shift">
+          <div class="cap">Mechanism: anchor shift</div>
+        </div>
+        
+        <div class="plot">
+          <img src="plots/median/median_plot_50.png" alt="Median-based robustness (MSE-style)">
+          <div class="cap">Median-based robustness (MSE-style)</div>
+        </div>
+        
+        <div class="plot">
+          <img src="plots/median_mechanism/mechanism_median_Q50.png" alt="Median mechanism (if available)">
+          <div class="cap">Median mechanism (if available)</div>
+        </div>
+        
+
+    <h2>Full SUPER summary</h2>
+    <details open>
+      <summary>Show / hide full text</summary>
+      <div class="card" style="margin-top:10px;">
+        <pre class="block">================================================================================
 QUESTION Q50: 06_Export_0720_stats_P8D0zBuskV.csv
 Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.?
 Truth = 30963.0
 N_ctrl = 139   N_ext = 60
 ================================================================================
 
-[1] MEAN-BASED COLLECTIVE ERROR
-  Ec=1438.0257 ± 918.0548, CI=[70.1396,3315.5533]
-  Ex=2436.5639 ± 524.1197, CI=[1532.5721,3511.9012]
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1438.0257 ± 918.0548, CI = [70.1396, 3315.5533]
+  Ex = 2436.5639 ± 524.1197, CI = [1532.5721, 3511.9012]
   Percent Change = 69.44%
-  Bootstrap P(Ext&lt;Ctrl) = 0.1770
-  t-test(E): t=-29.870, p=0.000000 (SIGNIFICANT (p &lt; .05))
+  Bootstrap P(Ext &lt; Ctrl) = 0.1770
+  t-test(E): t = -29.870, p = 0.000000 (SIGNIFICANT (p &lt; .05))
 
-[2] MEAN INDIVIDUAL ERROR (ε)
-  ε_ctrl=4419.4748, ε_ext=2926.3667
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 4419.4748, ε_ext = 2926.3667
   Percent Change = -33.78%
   Welch t-test p = 0.1217
 
-[3] MEAN DIVERSITY (δ)
-  δ_ctrl=10739.6865, δ_ext=3986.3207
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 10739.6865, δ_ext = 3986.3207
   Percent Change = -62.88%
   Levene p = 0.1628
 
 [4] ANCHOR DIAGNOSTICS
-  Anchors: A=25754.0, B=32253.0
-  Effective: A=False, B=True
+  Anchors: A = 25754.0, B = 32253.0
+  Effective: A = False, B = True
 
-[5] EQUATION 6 CHECK
-  w_L=0.6335, w_H=0.2546, Δ=4321.4825
-  Criterion_L=None, Criterion_H=None
-  Meets both = True
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.6335, anchor_weight_high = 0.2546
+  Δ = 4321.4825
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
 
-[6] MEAN δ–ε–E SCENARIO
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
   Scenario: δ:down, ε:down, E:up
-  Mechanism Explanation: Wrong-center compression: forecasts collapse around an incorrect value instead of the true value (30963.0).
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Wrong-Center Compression&#x27;, &#x27;explanation&#x27;: &#x27;Converged toward wrong value.&#x27;}
 
 ================================================================================
 INTERPRETATION — MEAN AGGREGATION
 ================================================================================
-Mean-based collective error changed by 69.44% relative to the true value 30963.0. Scenario=δ:down, ε:down, E:up. Equation 6 feasibility=True.
+Mean-based collective error changed by 69.44% relative to the true value 30963.0. Scenario = δ:down, ε:down, E:up. Eq6 Feasibility = True.
 ================================================================================
 
 [7] MEDIAN AGGREGATION SUMMARY
@@ -166,45 +293,23 @@ Mean-based collective error changed by 69.44% relative to the true value 30963.0
   Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 30963.0.
 ================================================================================
 </pre>
-        </div>
+      </div>
+    </details>
+
+    <div class="card" style="display:flex; justify-content:space-between; gap:10px;">
+      <a class="navlink" href="Q47.html">← Q47</a>
+      <a class="navlink" href="index.html">Overview</a>
+      <a class="navlink" href="Q51.html">Q51 →</a>
     </div>
     
-    
-        <h2>📊 Mean-Based Barrera Analysis</h2>
-        <p class="plot-description">Distribution comparison showing Control vs Low Anchor vs High Anchor conditions 
-        with error analysis using mean estimates. This replicates the B-L methodology.</p>
-        <div class="plot-container">
-            <img src="plots/mean/plot_50.png" alt="Mean-Based Barrera Plot for Q50">
-        </div>
-        
-        <h2>🔬 Mechanism Analysis</h2>
-        <p class="plot-description">Decomposition of collective error into individual error (ε) and diversity (δ).</p>
-        
-            <h3>Main Mechanism (ε-δ Decomposition)</h3>
-            <div class="plot-container">
-                <img src="plots/mechanism/mechanism_main_Q50.png" alt="Main Mechanism (ε-δ Decomposition) for Q50">
-            </div>
-            
-            <h3>Anchor Shift Analysis</h3>
-            <div class="plot-container">
-                <img src="plots/mechanism/mechanism_anchor_shift_Q50.png" alt="Anchor Shift Analysis for Q50">
-            </div>
-            
-        <h2>📈 Median-Based Analysis</h2>
-        <p class="plot-description">Robustness check using median estimates (less sensitive to outliers).</p>
-        
-            <h3>Median Distribution Analysis</h3>
-            <div class="plot-container">
-                <img src="plots/median/plot_median_Q50.png" alt="Median Distribution Analysis for Q50">
-            </div>
-            
-            <h3>Median Mechanism Analysis</h3>
-            <div class="plot-container">
-                <img src="plots/median_mechanism/mechanism_median_Q50.png" alt="Median Mechanism Analysis for Q50">
-            </div>
-            
-</div>
+      </div>
+    </main>
+  </div>
 
-<script src="js/main.js"></script>
+  <div class="fab">
+    <button id="topBtn">↑ Top</button>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

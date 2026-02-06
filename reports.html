@@ -1,0 +1,2358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTF Dashboard — Reports</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="brand">
+        <h1>PTF Dashboard</h1>
+        <p>Barrera-Lemarchand style + extensions</p>
+      </div>
+
+      <div class="side-controls">
+        <div class="search">
+          <span class="icon">🔎</span>
+          <input id="qSearch" type="text" placeholder="Filter questions…" onkeyup="filterQuestions()">
+        </div>
+        <button class="btn" id="themeBtn">🌙 Dark</button>
+      </div>
+
+      <div class="side-scroll">
+        
+        <div class="side-section" id="sec_overview">
+          <h3 data-section-toggle="1" data-target="sec_overview">
+            <span>Overview</span>
+            <span>▾</span>
+          </h3>
+          <div class="items">
+      <a class="navlink " href="index.html"><span>Overview</span><span class="badge">Home</span></a>
+      <a class="navlink " href="findings.html"><span>Key Findings</span><span class="badge">Text</span></a>
+      <a class="navlink " href="dpt_analysis.html"><span>DPT Analysis</span><span class="badge">Plots</span></a>
+      <a class="navlink " href="eq4_analysis.html"><span>Equation 4</span><span class="badge">Plots</span></a>
+      <a class="navlink active" href="reports.html"><span>Reports</span><span class="badge">TXT</span></a>
+    </div>
+        </div>
+        
+        
+        <div class="side-section" id="sec_questions">
+          <h3 data-section-toggle="1" data-target="sec_questions">
+            <span>Questions</span>
+            <span>▾</span>
+          </h3>
+          <div class="items"><a class="navlink " href="Q03.html" data-qcard="1"
+                 data-qtext="Q03 In HH:MM, how long will this year&#x27;s WWDC keynote address be? Improved">
+                 <span>Q03</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q04.html" data-qcard="1"
+                 data-qtext="Q04 Apple&#x27;s WWDC starts next week!ðŸ™Œ What will the temperature be in San Jose at 10 PST on Monday? Improved">
+                 <span>Q04</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q05.html" data-qcard="1"
+                 data-qtext="Q05 How many different people will present during the keynote this year? Improved">
+                 <span>Q05</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q11.html" data-qcard="1"
+                 data-qtext="Q11 UK weather is so unpredictable! In °C, what will the temperature be tomorrow at 13:00 DST in London? Improved">
+                 <span>Q11</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q12.html" data-qcard="1"
+                 data-qtext="Q12 How many likes will @Sothebys last Instagram post today get by 17:00 ET tomorrow? Improved">
+                 <span>Q12</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q14.html" data-qcard="1"
+                 data-qtext="Q14 World Cup sponsor! What will McDonald&#x27;s (MCD) stock close at on the NYSE tomorrow? Improved">
+                 <span>Q14</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q17.html" data-qcard="1"
+                 data-qtext="Q17 Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday? Improved">
+                 <span>Q17</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q18.html" data-qcard="1"
+                 data-qtext="Q18 Are you ready, Swifties? In °C, what will the temperature be at 9 AM local time in London tomorrow? Improved">
+                 <span>Q18</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q19.html" data-qcard="1"
+                 data-qtext="Q19 Taylor&#x27;s on tour! How many daily views will Taylor Swift&#x27;s YouTube VEVO channel have on Monday? Improved">
+                 <span>Q19</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q20.html" data-qcard="1"
+                 data-qtext="Q20 Big 5 Marathon! In °F, what will the temp. be at 11 AM local time in Pretoria, South Africa tomorrow? Not improved">
+                 <span>Q20</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q21.html" data-qcard="1"
+                 data-qtext="Q21 Race among the African wildlife! How many racers will finish this year&#x27;s Big Five Marathon? Improved">
+                 <span>Q21</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q23.html" data-qcard="1"
+                 data-qtext="Q23 Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.? Improved">
+                 <span>Q23</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q24.html" data-qcard="1"
+                 data-qtext="Q24 GP sponsor! What will Pirelli&#x27;s stock price be at close on Tuesday on the Milan Stock Exchange? Improved">
+                 <span>Q24</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q26.html" data-qcard="1"
+                 data-qtext="Q26 What will the length of the newest video published on IMVDb be on Thurs. at 17:00 ET? Improved">
+                 <span>Q26</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q29.html" data-qcard="1"
+                 data-qtext="Q29 What will the diff. in subscribers be for Ed Sheeran&#x27;s YouTube channel be between Saturday &amp; Sunday? Not improved">
+                 <span>Q29</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q30.html" data-qcard="1"
+                 data-qtext="Q30 What will the temperature be in Amsterdam at noon local time on Saturday? Improved">
+                 <span>Q30</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q32.html" data-qcard="1"
+                 data-qtext="Q32 Movie magic! How much will the Top 10 films in North America gross at the box office on Monday? Improved">
+                 <span>Q32</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q35.html" data-qcard="1"
+                 data-qtext="Q35 How many reacts will the last post on Mtl en Arts FB page on Tuesday get within 24 hrs? Improved">
+                 <span>Q35</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q37.html" data-qcard="1"
+                 data-qtext="Q37 How many times will the letters VOGUE appear in the last tweet tweeted by @VogueParis by Tues. at 17:00 ET? Improved">
+                 <span>Q37</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q38.html" data-qcard="1"
+                 data-qtext="Q38 Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London? Not improved">
+                 <span>Q38</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q40.html" data-qcard="1"
+                 data-qtext="Q40 In MM:SS what will the length of the newest YouTube video published on IMVDb.com be on Sunday at 11 ET? Not improved">
+                 <span>Q40</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q41.html" data-qcard="1"
+                 data-qtext="Q41 KICK! How many passes between players will be recorded during the Brazil vs. Belgium match on Friday? Improved">
+                 <span>Q41</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q45.html" data-qcard="1"
+                 data-qtext="Q45 Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time? Not improved">
+                 <span>Q45</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q47.html" data-qcard="1"
+                 data-qtext="Q47 The Montreux Jazz Festival is starting! How much will $1 CAD be worth in CHF on Tuesday at 13:00 ET? Improved">
+                 <span>Q47</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q50.html" data-qcard="1"
+                 data-qtext="Q50 Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.? Not improved">
+                 <span>Q50</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q51.html" data-qcard="1"
+                 data-qtext="Q51 World Cup semi-finals! How many passes will be kicked during the Croatia vs. England match on Wed.? Not improved">
+                 <span>Q51</span><span class="badge no">Not improved</span>
+                </a>
+<a class="navlink " href="Q54.html" data-qcard="1"
+                 data-qtext="Q54 Box office hits! In millions how much will the Top 12 movies gross during the upcoming weekend? Improved">
+                 <span>Q54</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q59.html" data-qcard="1"
+                 data-qtext="Q59 Happy Anniversary Twitter! What will Twitter&#x27;s stock price be on the NYSE at noon on Wednesday? Improved">
+                 <span>Q59</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q60.html" data-qcard="1"
+                 data-qtext="Q60 World Cup Final TODAY! In Â°C what will the temperature be at 9 AM local time on Thursday in Moscow? Improved">
+                 <span>Q60</span><span class="badge ok">Improved</span>
+                </a>
+<a class="navlink " href="Q62.html" data-qcard="1"
+                 data-qtext="Q62 Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be? Improved">
+                 <span>Q62</span><span class="badge ok">Improved</span>
+                </a></div>
+        </div>
+        
+      </div>
+    </div>
+    </aside>
+    <main class="content">
+      <div class="container">
+        <div class="topbar">
+          <button class="btn" id="menuBtn">☰ Menu</button>
+          <div class="pill">PTF Dashboard — Reports</div>
+        </div>
+
+        
+<h1>Reports</h1>
+<p class="muted">Text outputs generated by Block 3 and Eq4.</p>
+
+<h2>Final Analysis Report</h2>
+<div class="card"><pre class="block">================================================================================
+  PTF FINAL ANALYSIS REPORT
+  Based on Barrera-Lemarchand et al. (2024)
+================================================================================
+
+Generated: 2026-02-06 00:51:34
+
+
+────────────────────────────────────────────────────────────────────────────────
+0. FILE COMPLETENESS AUDIT
+────────────────────────────────────────────────────────────────────────────────
+Loaded artifacts: 24
+Missing artifacts: 0
+
+
+────────────────────────────────────────────────────────────────────────────────
+1. INTRODUCTION
+────────────────────────────────────────────────────────────────────────────────
+This report consolidates analyses of Play the Future (PTF) data using a framework
+aligned with Barrera-Lemarchand et al. (2024). Key decomposition uses the Diversity
+Prediction Theorem (DPT) with squared errors:
+
+    E = ε - δ
+
+where E = (μ - θ)², ε = mean((xᵢ - θ)²), δ = var(x).
+
+We report mean-based, median-based robustness, DPT decomposition, and anchoring
+model (Equation 4) results. Where present, we also report model-based feasibility
+tests (Equation 6).
+
+────────────────────────────────────────────────────────────────────────────────
+2. KEY FINDINGS
+────────────────────────────────────────────────────────────────────────────────
+======================================================================
+======================================================================
+
+Generated: 2026-02-06 00:51:34
+
+──────────────────────────────────────────────────────────────────────
+DIVERSITY PREDICTION THEOREM (DPT) ANALYSIS
+──────────────────────────────────────────────────────────────────────
+
+  Questions analyzed: 30
+
+  EXTREMIZATION SUCCESS (E_ext &lt; E_ctrl): 23/30 (76.7%)
+  B-L MECHANISM (Δδ &gt; Δε AND E↓):         23/30 (76.7%)
+
+  CONTROL BIAS PREDICTION ACCURACY: 28/30 (93.3%)
+  EQUATION 6 FEASIBILITY ACCURACY:  22/30 (73.3%)
+
+  MODEL-BASED FEASIBILITY (2E):
+    feas_emp: 72.4% (n=29)
+    feas_hyp: 86.7% (n=30)
+    feas_exp: 86.7% (n=30)
+
+  MECHANISM DISTRIBUTION (Extremized):
+    Calibration: 19/30 (63.3%)
+    Check (δ↓ ε↓): 5/30 (16.7%)
+    B-L Extremization: 4/30 (13.3%)
+    Backfire: 1/30 (3.3%)
+    Check (δ↑ ε↑): 1/30 (3.3%)
+
+──────────────────────────────────────────────────────────────────────
+EQUATION 4 ANALYSIS (θ vs μ₀ REFERENCE)
+──────────────────────────────────────────────────────────────────────
+
+  θ (Truth): r = -0.1636, p = 0.224 | ✓ NEGATIVE (expected) | Not significant
+
+  μ₀ (Control Mean): r = +0.1943, p = 0.1476 | ✗ POSITIVE (unexpected) | Not significant
+
+  Eq4 summary (from equation4_summary.txt):
+  ======================================================================
+    EQUATION 4 COMPLETE ANALYSIS SUMMARY
+    Barrera-Lemarchand et al. (2024) Anchoring Extremeness Effect
+  ======================================================================
+  
+  Total observations: 60
+  Valid observations: 57
+  Excluded observations: 3
+  Unique questions: 30
+  
+  ----------------------------------------------------------------------
+  AUTOMATIC EXCLUSION CRITERIA
+  ----------------------------------------------------------------------
+    • Negative weights (w &lt; 0): violates attraction assumption
+    • Extreme weights (w &gt; 2): computational artifact
+  ... (see equation4_summary.txt for full)
+
+======================================================================
+  END OF KEY FINDINGS
+======================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+3. OUTPUT FILES
+────────────────────────────────────────────────────────────────────────────────
+
+Loaded artifacts:
+  • Control Bias Prediction Test (2D): ctrl_bias_prediction_test.csv
+  • DPT Full Results (2D): dpt_full_results.csv
+  • DPT Mechanism Summary (2D): dpt_mechanism_summary.csv
+  • Equation 4 Model Fits (2C): equation4_model_fits.csv
+  • Equation 4 Summary TXT (2C): equation4_summary.txt
+  • Equation 4 Weights (2C): equation4_anchoring_weights.csv
+  • Equation 4 Within-Question (2C): equation4_within_question.csv
+  • Equation 4 θ vs μ₀ Comparison (2C): equation4_theta_vs_mu0_comparison.csv
+  • Feasibility Condition Test (2D): feasibility_condition_test.csv
+  • Mean Analysis (2A): block_2A_mean_results.csv
+  • Mechanism-by-Question Table (2D): mechanism_by_question.csv
+  • Median MSE Analysis (2B): block_2B_median_mse_results.csv
+  • Model Feasibility Corrected (2E): model_feasibility_corrected.csv
+  • Model Feasibility Results (2E): model_feasibility_results.csv
+  • MSE Analysis (2A): block_2A_mse_results.csv
+  • Plot: DPT BL Hypothesis Test: dpt_bl_hypothesis_test.png
+  • Plot: DPT Identity: dpt_identity_verification.png
+  • Plot: DPT Mechanism Dist: dpt_mechanism_distribution.png
+  • Plot: Eq4 Comparison: equation4_comparison.png
+  • Plot: Eq4 Excluded: equation4_excluded_observations.png
+  • Plot: Eq4 Normalized: equation4_normalized_analysis.png
+  • Plot: Eq4 Within: equation4_within_question.png
+  • Qualified Questions: qualified_questions.csv
+  • Summary Statistics: summary_statistics_all_questions.csv
+
+================================================================================
+  END OF FINAL ANALYSIS REPORT
+================================================================================</pre></div>
+
+<h2>Mega Summary</h2>
+<div class="card"><pre class="block">================================================================================
+  PTF MEGA SUMMARY — ALL ANALYSES CONSOLIDATED
+================================================================================
+
+Generated: 2026-02-06 00:51:34
+
+================================================================================
+
+SECTION 1: ANALYSIS OVERVIEW
+--------------------------------------------------
+  Total qualified questions: 30
+  Analyses present:
+    - Block 2A Mean:   Yes
+    - Block 2A MSE:    Yes
+    - Block 2B Median: Yes
+    - Block 2C Eq4:    Yes
+    - Block 2D DPT:    Yes
+    - Block 2E Feas:   Yes
+
+SECTION 2: DPT RESULTS (SQUARED ERRORS)
+--------------------------------------------------
+  Low       : 17/30 improved (56.7%)
+  High      : 18/30 improved (60.0%)
+  Extremized: 23/30 improved (76.7%)
+
+  Best condition distribution:
+    Low: 14/30 (46.7%)
+    High: 9/30 (30.0%)
+    Extremized: 6/30 (20.0%)
+    Control: 1/30 (3.3%)
+
+SECTION 3: EQUATION 4 (θ vs μ₀)
+--------------------------------------------------
+  Reference                    Pearson r      p-value       Direction
+  ----------------------------------------------------------------------
+  θ (Truth)                      -0.1636        0.224      Negative ✓
+  μ₀ (Control Mean)              +0.1943       0.1476      Positive ✗
+
+SECTION 4: EQ4 MODEL FITS
+--------------------------------------------------
+  Reference            Model                  w0         beta         R2        AIC
+  ------------------------------------------------------------------------------
+  θ (Truth)            Exponential        0.7673     0.503715     0.0375    -114.95
+  θ (Truth)            Linear             0.7336     0.211050     0.0268    -114.32
+  θ (Truth)            Hyperbolic         0.8541     1.250694     0.0626    -116.45
+  μ₀ (Control Mean)    Exponential        0.6750     0.000000    -0.0000    -112.77
+  μ₀ (Control Mean)    Linear             0.5873    -0.217478     0.0377    -114.96
+  μ₀ (Control Mean)    Hyperbolic         0.6750     0.000000    -0.0000    -112.77
+
+SECTION 5: MODEL-BASED FEASIBILITY (2E)
+--------------------------------------------------
+  feas_emp: 72.4% (n=29)
+  feas_hyp: 86.7% (n=30)
+  feas_exp: 86.7% (n=30)
+
+SECTION 6: PER-QUESTION SUPER SUMMARIES
+--------------------------------------------------
+
+============================================================
+SUPER SUMMARY — Q03
+============================================================
+================================================================================
+QUESTION Q03: 01_Pilot_stats_tIqZd2OC7X.csv
+In HH:MM, how long will this year&#x27;s WWDC keynote address be?
+Truth = 135.0
+N_ctrl = 171   N_ext = 106
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 38.4400 ± 23.2741, CI = [3.7453, 89.6448]
+  Ex = 5.6117 ± 1.1241, CI = [3.2830, 7.6509]
+  Percent Change = -85.40%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9610
+  t-test(E): t = 44.552, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 59.5380, ε_ext = 10.5189
+  Percent Change = -82.33%
+  Welch t-test p = 0.006124
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 234.5362, δ_ext = 11.6705
+  Percent Change = -95.02%
+  Levene p = 0.02772
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 139.0, B = 123.0
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9944, anchor_weight_high = 1.1213
+  Δ = 72.4062
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = False
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -85.40% relative to the true value 135.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = False.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 8.0000 → 8.5000 (6.25%)
+  Median ε: 15.0000 → 10.0000 (-33.33%)
+  Median δ: 10.0000 → 5.5000 (-45.00%)
+  Median Scenario: δ:down, ε:down, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (135.0).
+  Median t-test p-value = 0.001129 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 135.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q04
+============================================================
+================================================================================
+QUESTION Q04: 01_Pilot_stats_ff6ClfwxCi.csv
+Apple&#x27;s WWDC starts next week!ðŸ™Œ What will the temperature be in San Jose at 10 PST on Monday?
+Truth = 66.0
+N_ctrl = 157   N_ext = 63
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 8.6816 ± 0.9679, CI = [6.6020, 10.3813]
+  Ex = 7.4781 ± 0.8717, CI = [5.7294, 9.0798]
+  Percent Change = -13.86%
+  Bootstrap P(Ext &lt; Ctrl) = 0.8180
+  t-test(E): t = 29.217, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 10.1210, ε_ext = 9.3016
+  Percent Change = -8.10%
+  Welch t-test p = 0.2668
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 8.0094, δ_ext = 6.9940
+  Percent Change = -12.68%
+  Levene p = 0.2804
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 79.0, B = 57.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.4716, anchor_weight_high = 0.6068
+  Δ = 32.3437
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -13.86% relative to the true value 66.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 10.0000 → 10.0000 (0.00%)
+  Median ε: 10.0000 → 10.0000 (0.00%)
+  Median δ: 2.0000 → 4.0000 (100.00%)
+  Median Scenario: δ:up, ε:no_change, E:no_change
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates equal distance from truth (66.0).
+  Median t-test p-value = 0.000001 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:no_change, E:no_change
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 66.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q05
+============================================================
+================================================================================
+QUESTION Q05: 01_Pilot_stats_OI5xwwgyWi.csv
+How many different people will present during the keynote this year?
+Truth = 9.0
+N_ctrl = 175   N_ext = 87
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.8651 ± 0.7943, CI = [0.5974, 3.6216]
+  Ex = 1.2528 ± 0.2767, CI = [0.7353, 1.8046]
+  Percent Change = -32.83%
+  Bootstrap P(Ext &lt; Ctrl) = 0.7370
+  t-test(E): t = 23.019, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 3.4171, ε_ext = 2.0115
+  Percent Change = -41.14%
+  Welch t-test p = 0.01093
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 7.1949, δ_ext = 2.5963
+  Percent Change = -63.92%
+  Levene p = 0.0545
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 12.0, B = 8.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9108, anchor_weight_high = 0.8890
+  Δ = 4.1657
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -32.83% relative to the true value 9.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 0.0000 → 0.0000 (nan%)
+  Median ε: 2.0000 → 2.0000 (0.00%)
+  Median δ: 2.0000 → 2.0000 (0.00%)
+  Median Scenario: δ:no_change, ε:no_change, E:no_change
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates equal distance from truth (9.0).
+  Median t-test p-value = 0.000349 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:no_change, ε:no_change, E:no_change
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 9.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q11
+============================================================
+================================================================================
+QUESTION Q11: 03_Export_0627_stats_XsElvKSAKw.csv
+UK weather is so unpredictable! In °C, what will the temperature be tomorrow at 13:00 DST in London?
+Truth = 23.0
+N_ctrl = 165   N_ext = 66
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.9494 ± 1.0861, CI = [0.1061, 4.0303]
+  Ex = 1.6201 ± 0.3312, CI = [1.0303, 2.2424]
+  Percent Change = -16.89%
+  Bootstrap P(Ext &lt; Ctrl) = 0.5870
+  t-test(E): t = 9.170, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 5.6848, ε_ext = 2.5606
+  Percent Change = -54.96%
+  Welch t-test p = 7.022e-05
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 10.8406, δ_ext = 2.6842
+  Percent Change = -75.24%
+  Levene p = 0.1252
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 20.0, B = 24.0
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 1.5093, anchor_weight_high = 0.9066
+  Δ = 3.0706
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -16.89% relative to the true value 23.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 3.0000 → 2.0000 (-33.33%)
+  Median ε: 4.0000 → 2.0000 (-50.00%)
+  Median δ: 2.0000 → 2.0000 (0.00%)
+  Median Scenario: δ:no_change, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (23.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:no_change, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 23.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q12
+============================================================
+================================================================================
+QUESTION Q12: 02_Export_0620_stats_wyNJpvIEx7.csv
+How many likes will @Sothebys last Instagram post today get by 17:00 ET tomorrow?
+Truth = 3110.0
+N_ctrl = 136   N_ext = 82
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 3655.6979 ± 4492.5302, CI = [9.7787, 16198.3564]
+  Ex = 81.3262 ± 59.4796, CI = [3.3405, 214.5546]
+  Percent Change = -97.78%
+  Bootstrap P(Ext &lt; Ctrl) = 0.7760
+  t-test(E): t = 25.158, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 3989.3015, ε_ext = 704.1341
+  Percent Change = -82.35%
+  Welch t-test p = 0.3181
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 38155.0564, δ_ext = 772.4661
+  Percent Change = -97.98%
+  Levene p = 0.4348
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 2228.0, B = 3928.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9328, anchor_weight_high = 1.0646
+  Δ = 6620.4157
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = False
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -97.78% relative to the true value 3110.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = False.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 32.0000 → 331.0000 (934.38%)
+  Median ε: 375.0000 → 732.5000 (95.33%)
+  Median δ: 352.0000 → 550.0000 (56.25%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (3110.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 3110.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q14
+============================================================
+================================================================================
+QUESTION Q14: 03_Export_0627_stats_4GLUEybtru.csv
+World Cup sponsor! What will McDonald&#x27;s (MCD) stock close at on the NYSE tomorrow?
+Truth = 164.55
+N_ctrl = 157   N_ext = 49
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1103.7409 ± 1949.3752, CI = [0.1392, 6869.4180]
+  Ex = 1.3502 ± 0.4240, CI = [0.5069, 2.1685]
+  Percent Change = -99.88%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6470
+  t-test(E): t = 17.883, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 1076.3308, ε_ext = 2.7580
+  Percent Change = -99.74%
+  Welch t-test p = 0.318
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 13385.9483, δ_ext = 3.1661
+  Percent Change = -99.98%
+  Levene p = 0.5772
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 163.48, B = 169.68
+  Effective: A = True, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 1.0001, anchor_weight_high = 1.0004
+  Δ = 2145.5479
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -99.88% relative to the true value 164.55. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 2.1100 → 0.1700 (-91.94%)
+  Median ε: 3.2400 → 2.5500 (-21.30%)
+  Median δ: 1.9200 → 2.7200 (41.67%)
+  Median Scenario: δ:up, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (164.55).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 164.55.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q17
+============================================================
+================================================================================
+QUESTION Q17: 03_Export_0627_stats_o4HPHtleFO.csv
+Happy Birthday, Prince William! How many words long will the last @RoyalFamily tweet be on Thursday?
+Truth = 31.0
+N_ctrl = 161   N_ext = 57
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 6.6066 ± 1.3010, CI = [3.9816, 9.0175]
+  Ex = 5.7504 ± 1.3929, CI = [2.8417, 8.4917]
+  Percent Change = -12.96%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6820
+  t-test(E): t = 14.206, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 9.4286, ε_ext = 10.2281
+  Percent Change = 8.48%
+  Welch t-test p = 0.4051
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 9.5115, δ_ext = 10.3246
+  Percent Change = 8.55%
+  Levene p = 0.08972
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 10.0, B = 46.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.4872, anchor_weight_high = 0.4436
+  Δ = 28.5061
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:up, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:up, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;B-L Extremization&#x27;, &#x27;explanation&#x27;: &#x27;Diversity increase outweighed error increase.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -12.96% relative to the true value 31.0. Scenario = δ:up, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 7.0000 → 9.0000 (28.57%)
+  Median ε: 8.0000 → 11.0000 (37.50%)
+  Median δ: 6.0000 → 8.0000 (33.33%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (31.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:up, ε:up, E:down
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 31.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q18
+============================================================
+================================================================================
+QUESTION Q18: 03_Export_0627_stats_LdLiubfj04.csv
+Are you ready, Swifties? In °C, what will the temperature be at 9 AM local time in London tomorrow?
+Truth = 15.0
+N_ctrl = 132   N_ext = 55
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.5886 ± 0.6430, CI = [0.5450, 3.0182]
+  Ex = 0.3282 ± 0.2565, CI = [0.0182, 0.9636]
+  Percent Change = -79.34%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9760
+  t-test(E): t = 57.573, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 2.6439, ε_ext = 2.5455
+  Percent Change = -3.72%
+  Welch t-test p = 0.8333
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 4.8977, δ_ext = 3.2014
+  Percent Change = -34.63%
+  Levene p = 0.8702
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 11.0, B = 20.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.5638, anchor_weight_high = 0.0611
+  Δ = 10.0376
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -79.34% relative to the true value 15.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 0.5000 → 0.0000 (-100.00%)
+  Median ε: 2.0000 → 2.0000 (0.00%)
+  Median δ: 1.5000 → 2.0000 (33.33%)
+  Median Scenario: δ:up, ε:no_change, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (15.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:no_change, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 15.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q19
+============================================================
+================================================================================
+QUESTION Q19: 03_Export_0627_stats_7CdJP7MIZs.csv
+Taylor&#x27;s on tour! How many daily views will Taylor Swift&#x27;s YouTube VEVO channel have on Monday?
+Truth = 4723825.0
+N_ctrl = 152   N_ext = 84
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 276541.0169 ± 131582.6321, CI = [34344.5613, 539841.8589]
+  Ex = 202310.7296 ± 77483.8189, CI = [37070.7801, 339472.7765]
+  Percent Change = -26.84%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6810
+  t-test(E): t = 15.372, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 769482.2368, ε_ext = 472732.3690
+  Percent Change = -38.56%
+  Welch t-test p = 0.006045
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 1273164.2513, δ_ext = 725415.8215
+  Percent Change = -43.02%
+  Levene p = 0.08985
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 4623075.0, B = 5583663.0
+  Effective: A = True, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9055, anchor_weight_high = 0.4427
+  Δ = 815587.4444
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -26.84% relative to the true value 4723825.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 276175.0000 → 202343.5000 (-26.73%)
+  Median ε: 351370.0000 → 276175.0000 (-21.40%)
+  Median δ: 213824.0000 → 219897.0000 (2.84%)
+  Median Scenario: δ:up, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (4723825.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 4723825.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q20
+============================================================
+================================================================================
+QUESTION Q20: 03_Export_0627_stats_829WRIsLd4.csv
+Big 5 Marathon! In °F, what will the temp. be at 11 AM local time in Pretoria, South Africa tomorrow?
+Truth = 67.0
+N_ctrl = 144   N_ext = 61
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 2.5206 ± 0.8707, CI = [0.8197, 4.2791]
+  Ex = 5.1087 ± 0.6641, CI = [3.8352, 6.4107]
+  Percent Change = 102.68%
+  Bootstrap P(Ext &lt; Ctrl) = 0.0100
+  t-test(E): t = -74.739, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 4.9028, ε_ext = 5.7541
+  Percent Change = 17.36%
+  Welch t-test p = 0.2429
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 6.6791, δ_ext = 5.2376
+  Percent Change = -21.58%
+  Levene p = 0.9808
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 50.0, B = 68.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.3915, anchor_weight_high = -0.0379
+  Δ = 28.4376
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:up, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:up, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Backfire&#x27;, &#x27;explanation&#x27;: &#x27;Increased error while reducing diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 102.68% relative to the true value 67.0. Scenario = δ:down, ε:up, E:up. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 3.0000 → 5.0000 (66.67%)
+  Median ε: 3.5000 → 5.0000 (42.86%)
+  Median δ: 2.0000 → 3.0000 (50.00%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (67.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:up
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 67.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q21
+============================================================
+================================================================================
+QUESTION Q21: 03_Export_0627_stats_tKyKUkGP0t.csv
+Race among the African wildlife! How many racers will finish this year&#x27;s Big Five Marathon?
+Truth = 127.0
+N_ctrl = 170   N_ext = 77
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 3.1673 ± 2.7442, CI = [0.1295, 10.3909]
+  Ex = 1.9735 ± 1.4687, CI = [0.1039, 5.4685]
+  Percent Change = -37.69%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6250
+  t-test(E): t = 12.129, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 14.6000, ε_ext = 13.6623
+  Percent Change = -6.42%
+  Welch t-test p = 0.7576
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 37.1334, δ_ext = 18.9757
+  Percent Change = -48.90%
+  Levene p = 0.8027
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 152.0, B = 101.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.4093, anchor_weight_high = 0.3678
+  Δ = 6.3583
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -37.69% relative to the true value 127.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 1.0000 → 3.0000 (200.00%)
+  Median ε: 6.0000 → 10.0000 (66.67%)
+  Median δ: 7.0000 → 11.0000 (57.14%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (127.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 127.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q23
+============================================================
+================================================================================
+QUESTION Q23: 03_Export_0627_stats_NePyKRICQX.csv
+Grand Prix de France! In °C, what will the temp. be in Marseille, France at 11 AM local time on Mon.?
+Truth = 24.0
+N_ctrl = 162   N_ext = 46
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.5280 ± 0.7801, CI = [0.2826, 3.3478]
+  Ex = 1.4049 ± 0.4098, CI = [0.5864, 2.2174]
+  Percent Change = -8.06%
+  Bootstrap P(Ext &lt; Ctrl) = 0.5220
+  t-test(E): t = 4.419, p = 0.000011 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 2.7593, ε_ext = 2.5870
+  Percent Change = -6.24%
+  Welch t-test p = 0.72
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 5.5764, δ_ext = 2.7942
+  Percent Change = -49.89%
+  Levene p = 0.6451
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 30.0, B = 20.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.3571, anchor_weight_high = 0.4146
+  Δ = 8.1585
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -8.06% relative to the true value 24.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 1.0000 → 2.0000 (100.00%)
+  Median ε: 2.0000 → 2.0000 (0.00%)
+  Median δ: 2.0000 → 2.0000 (0.00%)
+  Median Scenario: δ:no_change, ε:no_change, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (24.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:no_change, ε:no_change, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 24.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q24
+============================================================
+================================================================================
+QUESTION Q24: 04_Export_0703_stats_yEOmGBBg4D.csv
+GP sponsor! What will Pirelli&#x27;s stock price be at close on Tuesday on the Milan Stock Exchange?
+Truth = 7.25
+N_ctrl = 190   N_ext = 65
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 148.9729 ± 237.0825, CI = [0.1401, 817.5676]
+  Ex = 0.0581 ± 0.0112, CI = [0.0361, 0.0803]
+  Percent Change = -99.96%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9970
+  t-test(E): t = 19.863, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 147.5026, ε_ext = 0.0829
+  Percent Change = -99.94%
+  Welch t-test p = 0.2929
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 1921.3831, δ_ext = 0.0895
+  Percent Change = -100.00%
+  Levene p = 0.5385
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 7.19, B = 7.33
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9996, anchor_weight_high = 0.9998
+  Δ = 294.8222
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -99.96% relative to the true value 7.25. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 0.1450 → 0.0800 (-44.83%)
+  Median ε: 0.1650 → 0.0800 (-51.52%)
+  Median δ: 0.1050 → 0.0600 (-42.86%)
+  Median Scenario: δ:down, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (7.25).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 7.25.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q26
+============================================================
+================================================================================
+QUESTION Q26: 04_Export_0703_stats_lyyYepGtKV.csv
+What will the length of the newest video published on IMVDb be on Thurs. at 17:00 ET?
+Truth = 217.0
+N_ctrl = 186   N_ext = 63
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 15.9221 ± 10.1299, CI = [3.0607, 41.7087]
+  Ex = 12.2028 ± 8.8024, CI = [0.4599, 32.9238]
+  Percent Change = -23.36%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6030
+  t-test(E): t = 8.764, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 33.2688, ε_ext = 38.4444
+  Percent Change = 15.56%
+  Welch t-test p = 0.5963
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 80.4357, δ_ext = 73.1194
+  Percent Change = -9.10%
+  Levene p = 0.5292
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 270.0, B = 151.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.2644, anchor_weight_high = 0.2459
+  Δ = 124.4054
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Accidental Correction&#x27;, &#x27;explanation&#x27;: &#x27;Error increased but collective error decreased.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -23.36% relative to the true value 217.0. Scenario = δ:down, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 13.0000 → 10.0000 (-23.08%)
+  Median ε: 24.0000 → 27.0000 (12.50%)
+  Median δ: 18.0000 → 24.0000 (33.33%)
+  Median Scenario: δ:up, ε:up, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (217.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:down
+  Median Scenario: δ:up, ε:up, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 217.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q29
+============================================================
+================================================================================
+QUESTION Q29: 04_Export_0703_stats_Pp54pLpHXH.csv
+What will the diff. in subscribers be for Ed Sheeran&#x27;s YouTube channel be between Saturday &amp; Sunday?
+Truth = 28210.0
+N_ctrl = 152   N_ext = 77
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 14209.7792 ± 12669.5458, CI = [1446.8010, 47054.0523]
+  Ex = 7898.4727 ± 1033.3553, CI = [6045.2471, 9934.8984]
+  Percent Change = -44.42%
+  Bootstrap P(Ext &lt; Ctrl) = 0.5670
+  t-test(E): t = 15.701, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 23601.3553, ε_ext = 8647.0000
+  Percent Change = -63.36%
+  Welch t-test p = 0.2524
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 161115.8714, δ_ext = 9049.5560
+  Percent Change = -94.38%
+  Levene p = 0.405
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 20929.0, B = 29287.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 1.2862, anchor_weight_high = 1.7904
+  Δ = 8945.5326
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = False
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -44.42% relative to the true value 28210.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = False.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 5520.5000 → 5710.0000 (3.43%)
+  Median ε: 6067.5000 → 5905.0000 (-2.68%)
+  Median δ: 3174.5000 → 2500.0000 (-21.25%)
+  Median Scenario: δ:down, ε:down, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (28210.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 28210.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q30
+============================================================
+================================================================================
+QUESTION Q30: 04_Export_0703_stats_ismbVHVgvY.csv
+What will the temperature be in Amsterdam at noon local time on Saturday?
+Truth = 73.0
+N_ctrl = 160   N_ext = 75
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 5.9629 ± 0.7932, CI = [4.4663, 7.6143]
+  Ex = 3.6279 ± 1.1224, CI = [1.5067, 5.9477]
+  Percent Change = -39.16%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9560
+  t-test(E): t = 53.725, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 7.2062, ε_ext = 8.0267
+  Percent Change = 11.38%
+  Welch t-test p = 0.373
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 6.8469, δ_ext = 9.9760
+  Percent Change = 45.70%
+  Levene p = 0.0006308
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 81.0, B = 56.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.2968, anchor_weight_high = 0.5629
+  Δ = 27.7690
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:up, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:up, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;B-L Extremization&#x27;, &#x27;explanation&#x27;: &#x27;Diversity increase outweighed error increase.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -39.16% relative to the true value 73.0. Scenario = δ:up, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 7.0000 → 2.0000 (-71.43%)
+  Median ε: 7.5000 → 7.0000 (-6.67%)
+  Median δ: 4.0000 → 7.0000 (75.00%)
+  Median Scenario: δ:up, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (73.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:up, ε:up, E:down
+  Median Scenario: δ:up, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 73.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q32
+============================================================
+================================================================================
+QUESTION Q32: 05_Export_0713_stats_WX9D1I5WWT.csv
+Movie magic! How much will the Top 10 films in North America gross at the box office on Monday?
+Truth = 24575462.0
+N_ctrl = 168   N_ext = 70
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 18279068.9830 ± 7067105.3598, CI = [7404607.1200, 34018651.2314]
+  Ex = 8248566.7128 ± 1169336.5665, CI = [5917186.2118, 10579295.5964]
+  Percent Change = -54.87%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9500
+  t-test(E): t = 44.281, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 20645077.5298, ε_ext = 10719477.8143
+  Percent Change = -48.08%
+  Welch t-test p = 0.03092
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 58595087.5022, δ_ext = 9904390.7827
+  Percent Change = -83.10%
+  Levene p = 0.2121
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 42991006.0, B = 10973333.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.5959, anchor_weight_high = 38.4271
+  Δ = 1901870.6940
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = False
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -54.87% relative to the true value 24575462.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = False.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 7162772.0000 → 9588212.0000 (33.86%)
+  Median ε: 7467336.0000 → 10130948.0000 (35.67%)
+  Median δ: 3261766.0000 → 5955050.5000 (82.57%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (24575462.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 24575462.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q35
+============================================================
+================================================================================
+QUESTION Q35: 05_Export_0713_stats_22bJsXhZzK.csv
+How many reacts will the last post on Mtl en Arts FB page on Tuesday get within 24 hrs?
+Truth = 37.0
+N_ctrl = 89   N_ext = 108
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 3826.0833 ± 411.9549, CI = [3034.7677, 4641.9213]
+  Ex = 60.8090 ± 33.7325, CI = [9.8851, 138.1722]
+  Percent Change = -98.41%
+  Bootstrap P(Ext &lt; Ctrl) = 1.0000
+  t-test(E): t = 288.069, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 3817.8764, ε_ext = 83.9815
+  Percent Change = -97.80%
+  Welch t-test p = 2.38e-14
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 3845.8772, δ_ext = 314.5277
+  Percent Change = -91.82%
+  Levene p = 1.813e-31
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 4.0, B = 73.0
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9780, anchor_weight_high = 0.9903
+  Δ = 7747.2628
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -98.41% relative to the true value 37.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 2083.0000 → 11.0000 (-99.47%)
+  Median ε: 2083.0000 → 30.5000 (-98.54%)
+  Median δ: 2101.0000 → 28.0000 (-98.67%)
+  Median Scenario: δ:down, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (37.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 37.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q37
+============================================================
+================================================================================
+QUESTION Q37: 05_Export_0713_stats_4tLz7DI1oE.csv
+How many times will the letters VOGUE appear in the last tweet tweeted by @VogueParis by Tues. at 17:00 ET?
+Truth = 18.0
+N_ctrl = 119   N_ext = 100
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 26.3386 ± 5.9722, CI = [16.9092, 40.0405]
+  Ex = 5.4862 ± 2.4508, CI = [1.5695, 10.6610]
+  Percent Change = -79.17%
+  Bootstrap P(Ext &lt; Ctrl) = 1.0000
+  t-test(E): t = 102.147, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 29.2437, ε_ext = 12.5600
+  Percent Change = -57.05%
+  Welch t-test p = 0.004213
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 58.6413, δ_ext = 25.4052
+  Percent Change = -56.68%
+  Levene p = 0.06207
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 32.0, B = 7.0
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.8316, anchor_weight_high = 1.0029
+  Δ = 57.4583
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -79.17% relative to the true value 18.0. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 19.0000 → 3.0000 (-84.21%)
+  Median ε: 19.0000 → 9.0000 (-52.63%)
+  Median δ: 12.0000 → 10.0000 (-16.67%)
+  Median Scenario: δ:down, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (18.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 18.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q38
+============================================================
+================================================================================
+QUESTION Q38: 05_Export_0713_stats_F61pu4lGWj.csv
+Tennis time! In Â°C what will the temp. be at 11 AM local time on Thursday in Wimbledon London?
+Truth = 24.0
+N_ctrl = 180   N_ext = 46
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 2.0018 ± 0.9905, CI = [0.1739, 3.5652]
+  Ex = 4.8435 ± 0.7207, CI = [3.4995, 6.2614]
+  Percent Change = 141.95%
+  Bootstrap P(Ext &lt; Ctrl) = 0.0050
+  t-test(E): t = -73.359, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 4.4278, ε_ext = 5.8478
+  Percent Change = 32.07%
+  Welch t-test p = 0.06963
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 8.6356, δ_ext = 4.8228
+  Percent Change = -44.15%
+  Levene p = 0.8321
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 12.0, B = 27.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.5666, anchor_weight_high = 0.1031
+  Δ = 10.7174
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:up, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:up, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Backfire&#x27;, &#x27;explanation&#x27;: &#x27;Increased error while reducing diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 141.95% relative to the true value 24.0. Scenario = δ:down, ε:up, E:up. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 3.0000 → 5.0000 (66.67%)
+  Median ε: 3.0000 → 5.0000 (66.67%)
+  Median δ: 2.0000 → 3.0000 (50.00%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (24.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:up
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 24.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q40
+============================================================
+================================================================================
+QUESTION Q40: 05_Export_0713_stats_ao2tyZIdSA.csv
+In MM:SS what will the length of the newest YouTube video published on IMVDb.com be on Sunday at 11 ET?
+Truth = 228.0
+N_ctrl = 179   N_ext = 48
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 11.6560 ± 7.4389, CI = [0.6458, 28.1547]
+  Ex = 21.9499 ± 17.3694, CI = [1.3740, 67.9208]
+  Percent Change = 88.31%
+  Bootstrap P(Ext &lt; Ctrl) = 0.2980
+  t-test(E): t = -17.228, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 37.7654, ε_ext = 60.7708
+  Percent Change = 60.92%
+  Welch t-test p = 0.3955
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 92.1212, δ_ext = 188.7719
+  Percent Change = 104.92%
+  Levene p = 0.2151
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 147.0, B = 337.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = -0.2737, anchor_weight_high = 0.0450
+  Δ = -67.0297
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = False
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:up, ε:up, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:up, ε:up, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Harmful Divergence&#x27;, &#x27;explanation&#x27;: &#x27;Diversity increase insufficient to compensate.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 88.31% relative to the true value 228.0. Scenario = δ:up, ε:up, E:up. Eq6 Feasibility = False.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 13.0000 → 15.5000 (19.23%)
+  Median ε: 23.0000 → 32.5000 (41.30%)
+  Median δ: 20.0000 → 29.0000 (45.00%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (228.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:up, ε:up, E:up
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 228.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q41
+============================================================
+================================================================================
+QUESTION Q41: 05_Export_0713_stats_SN5RkpuKGr.csv
+KICK! How many passes between players will be recorded during the Brazil vs. Belgium match on Friday?
+Truth = 927.0
+N_ctrl = 117   N_ext = 62
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 66.6692 ± 25.5969, CI = [11.9968, 114.0298]
+  Ex = 25.9341 ± 17.7340, CI = [1.5964, 65.6246]
+  Percent Change = -61.10%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9000
+  t-test(E): t = 41.367, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 139.2137, ε_ext = 154.1935
+  Percent Change = 10.76%
+  Welch t-test p = 0.5672
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 205.1489, δ_ext = 225.8912
+  Percent Change = 10.11%
+  Levene p = 0.1562
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 627.0, B = 1012.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.1750, anchor_weight_high = 1.0409
+  Δ = 216.7403
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:up, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:up, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;B-L Extremization&#x27;, &#x27;explanation&#x27;: &#x27;Diversity increase outweighed error increase.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -61.10% relative to the true value 927.0. Scenario = δ:up, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 75.0000 → 26.5000 (-64.67%)
+  Median ε: 97.0000 → 115.5000 (19.07%)
+  Median δ: 54.0000 → 106.5000 (97.22%)
+  Median Scenario: δ:up, ε:up, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (927.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:up, ε:up, E:down
+  Median Scenario: δ:up, ε:up, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 927.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q45
+============================================================
+================================================================================
+QUESTION Q45: 05_Export_0713_stats_eAwRpPaueh.csv
+Tour de France time!ðŸš´â€â™‚ï¸ In Â°C what will the temperature be in Paris on Monday at 10 AM local time?
+Truth = 21.0
+N_ctrl = 145   N_ext = 60
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.9909 ± 0.6291, CI = [0.9667, 3.4838]
+  Ex = 2.9778 ± 0.3983, CI = [2.1833, 3.8000]
+  Percent Change = 49.57%
+  Bootstrap P(Ext &lt; Ctrl) = 0.0960
+  t-test(E): t = -41.913, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 2.9103, ε_ext = 3.3167
+  Percent Change = 13.96%
+  Welch t-test p = 0.4388
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 5.0172, δ_ext = 3.1331
+  Percent Change = -37.55%
+  Levene p = 0.627
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 28.0, B = 18.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.3028, anchor_weight_high = 0.4681
+  Δ = 10.3049
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:up, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:up, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Backfire&#x27;, &#x27;explanation&#x27;: &#x27;Increased error while reducing diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 49.57% relative to the true value 21.0. Scenario = δ:down, ε:up, E:up. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 2.0000 → 2.0000 (0.00%)
+  Median ε: 2.0000 → 2.0000 (0.00%)
+  Median δ: 1.0000 → 2.0000 (100.00%)
+  Median Scenario: δ:up, ε:no_change, E:no_change
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates equal distance from truth (21.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:up
+  Median Scenario: δ:up, ε:no_change, E:no_change
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 21.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q47
+============================================================
+================================================================================
+QUESTION Q47: 06_Export_0720_stats_VujQGdBivl.csv
+The Montreux Jazz Festival is starting! How much will $1 CAD be worth in CHF on Tuesday at 13:00 ET?
+Truth = 0.7562
+N_ctrl = 172   N_ext = 33
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 0.0138 ± 0.0075, CI = [0.0014, 0.0308]
+  Ex = 0.0012 ± 0.0009, CI = [0.0001, 0.0036]
+  Percent Change = -91.35%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9770
+  t-test(E): t = 52.396, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 0.0220, ε_ext = 0.0042
+  Percent Change = -80.93%
+  Welch t-test p = 9.806e-07
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 0.0471, δ_ext = 0.0073
+  Percent Change = -84.52%
+  Levene p = 0.02125
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 0.7569, B = 0.7528
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.8751, anchor_weight_high = 0.8781
+  Δ = 0.0312
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -91.35% relative to the true value 0.7562. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 0.0009 → 0.0003 (-64.71%)
+  Median ε: 0.0045 → 0.0024 (-46.07%)
+  Median δ: 0.0041 → 0.0021 (-48.78%)
+  Median Scenario: δ:down, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (0.7562).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 0.7562.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q50
+============================================================
+================================================================================
+QUESTION Q50: 06_Export_0720_stats_P8D0zBuskV.csv
+Country dream team! How many daily views will the TimandFaithVEVO channel on YouTube have on Wed.?
+Truth = 30963.0
+N_ctrl = 139   N_ext = 60
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1438.0257 ± 918.0548, CI = [70.1396, 3315.5533]
+  Ex = 2436.5639 ± 524.1197, CI = [1532.5721, 3511.9012]
+  Percent Change = 69.44%
+  Bootstrap P(Ext &lt; Ctrl) = 0.1770
+  t-test(E): t = -29.870, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 4419.4748, ε_ext = 2926.3667
+  Percent Change = -33.78%
+  Welch t-test p = 0.1217
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 10739.6865, δ_ext = 3986.3207
+  Percent Change = -62.88%
+  Levene p = 0.1628
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 25754.0, B = 32253.0
+  Effective: A = False, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.6335, anchor_weight_high = 0.2546
+  Δ = 4321.4825
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Wrong-Center Compression&#x27;, &#x27;explanation&#x27;: &#x27;Converged toward wrong value.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 69.44% relative to the true value 30963.0. Scenario = δ:down, ε:down, E:up. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 1381.0000 → 2392.5000 (73.24%)
+  Median ε: 1963.0000 → 2464.5000 (25.55%)
+  Median δ: 1663.0000 → 1602.0000 (-3.67%)
+  Median Scenario: δ:down, ε:up, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (30963.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:up
+  Median Scenario: δ:down, ε:up, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 30963.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q51
+============================================================
+================================================================================
+QUESTION Q51: 06_Export_0720_stats_fBnvDQ6Ims.csv
+World Cup semi-finals! How many passes will be kicked during the Croatia vs. England match on Wed.?
+Truth = 1101.0
+N_ctrl = 160   N_ext = 52
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 178.2030 ± 28.7941, CI = [121.8986, 234.2596]
+  Ex = 179.3123 ± 14.3337, CI = [151.0553, 207.3846]
+  Percent Change = 0.62%
+  Bootstrap P(Ext &lt; Ctrl) = 0.4970
+  t-test(E): t = -1.091, p = 0.275584 (Not significant)
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 212.0188, ε_ext = 180.0577
+  Percent Change = -15.07%
+  Welch t-test p = 0.101
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 203.1830, δ_ext = 102.8904
+  Percent Change = -49.36%
+  Levene p = 0.6869
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 1111.0, B = 712.0
+  Effective: A = True, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.4259, anchor_weight_high = 0.4025
+  Δ = 859.9887
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:up
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:up&#x27;, &#x27;mechanism&#x27;: &#x27;Wrong-Center Compression&#x27;, &#x27;explanation&#x27;: &#x27;Converged toward wrong value.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by 0.62% relative to the true value 1101.0. Scenario = δ:down, ε:down, E:up. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 179.5000 → 181.5000 (1.11%)
+  Median ε: 184.5000 → 181.5000 (-1.63%)
+  Median δ: 45.5000 → 80.0000 (75.82%)
+  Median Scenario: δ:up, ε:down, E:up
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates predictions moved away from the true value (1101.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:up
+  Median Scenario: δ:up, ε:down, E:up
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 1101.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q54
+============================================================
+================================================================================
+QUESTION Q54: 06_Export_0720_stats_DDwJ9gR1Cg.csv
+Box office hits! In millions how much will the Top 12 movies gross during the upcoming weekend?
+Truth = 157.3
+N_ctrl = 91   N_ext = 89
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 161310165.3121 ± 55637548.6550, CI = [80770550.9411, 290444282.8655]
+  Ex = 65373647.9417 ± 11696280.0372, CI = [43602131.2155, 88786468.5494]
+  Percent Change = -59.47%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9910
+  t-test(E): t = 53.361, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 163188616.9374, ε_ext = 64715557.2876
+  Percent Change = -60.34%
+  Welch t-test p = 0.08198
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 520074279.2706, δ_ext = 108816469.9435
+  Percent Change = -79.08%
+  Levene p = 0.08368
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 112.3, B = 271.3
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.6293, anchor_weight_high = 0.5803
+  Δ = 539637106.1995
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -59.47% relative to the true value 157.3. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 356.7000 → 114.0000 (-68.04%)
+  Median ε: 356.7000 → 114.2000 (-67.98%)
+  Median δ: 438.8000 → 148.5000 (-66.16%)
+  Median Scenario: δ:down, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (157.3).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:down, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 157.3.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q59
+============================================================
+================================================================================
+QUESTION Q59: 06_Export_0720_stats_PpeLU4aCVD.csv
+Happy Anniversary Twitter! What will Twitter&#x27;s stock price be on the NYSE at noon on Wednesday?
+Truth = 43.12
+N_ctrl = 187   N_ext = 27
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 4002.2131 ± 10719.7547, CI = [0.8204, 29634.9379]
+  Ex = 0.7665 ± 0.1916, CI = [0.3918, 1.1283]
+  Percent Change = -99.98%
+  Bootstrap P(Ext &lt; Ctrl) = 0.9650
+  t-test(E): t = 11.804, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 4280.4639, ε_ext = 1.0693
+  Percent Change = -99.98%
+  Welch t-test p = 0.3184
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 58341.8410, δ_ext = 0.9767
+  Percent Change = -100.00%
+  Levene p = 0.7048
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 42.22, B = 44.1
+  Effective: A = True, B = True
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.9998, anchor_weight_high = 0.9999
+  Δ = 8562.0379
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:down, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:down, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Calibration&#x27;, &#x27;explanation&#x27;: &#x27;Anchoring reduced both individual error and diversity.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -99.98% relative to the true value 43.12. Scenario = δ:down, ε:down, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 1.0800 → 0.9000 (-16.67%)
+  Median ε: 1.1300 → 0.9900 (-12.39%)
+  Median δ: 0.4300 → 0.7700 (79.07%)
+  Median Scenario: δ:up, ε:down, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (43.12).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:down, E:down
+  Median Scenario: δ:up, ε:down, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 43.12.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q60
+============================================================
+================================================================================
+QUESTION Q60: 06_Export_0720_stats_qmIVHXYZsA.csv
+World Cup Final TODAY! In Â°C what will the temperature be at 9 AM local time on Thursday in Moscow?
+Truth = 21.0
+N_ctrl = 209   N_ext = 25
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 1.5671 ± 0.7970, CI = [0.2800, 3.5210]
+  Ex = 0.7772 ± 0.6369, CI = [0.0400, 2.2800]
+  Percent Change = -50.41%
+  Bootstrap P(Ext &lt; Ctrl) = 0.8070
+  t-test(E): t = 24.487, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 2.3876, ε_ext = 3.2000
+  Percent Change = 34.03%
+  Welch t-test p = 0.3207
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 3.6796, δ_ext = 4.9455
+  Percent Change = 34.40%
+  Levene p = 0.1374
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 16.0, B = 26.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.5799, anchor_weight_high = 0.4532
+  Δ = 5.9839
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:up, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:up, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;B-L Extremization&#x27;, &#x27;explanation&#x27;: &#x27;Diversity increase outweighed error increase.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -50.41% relative to the true value 21.0. Scenario = δ:up, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 2.0000 → 1.0000 (-50.00%)
+  Median ε: 2.0000 → 2.0000 (0.00%)
+  Median δ: 2.0000 → 2.0000 (0.00%)
+  Median Scenario: δ:no_change, ε:no_change, E:down
+  Mean vs Median: Median agrees with mean.
+  Interpretation: Median indicates anchors moved predictions closer to the true value (21.0).
+  Median t-test p-value = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:up, ε:up, E:down
+  Median Scenario: δ:no_change, ε:no_change, E:down
+  Conclusion: Anchoring effects are consistent across distribution center and tails relative to truth = 21.0.
+================================================================================
+
+
+============================================================
+SUPER SUMMARY — Q62
+============================================================
+================================================================================
+QUESTION Q62: 06_Export_0720_stats_RDQ8ZPzDVr.csv
+Classical Music Festival! How many words long will the last tweet tweeted by @bbcproms on Thursday be?
+Truth = 14.0
+N_ctrl = 200   N_ext = 22
+================================================================================
+
+[1] MEAN-BASED COLLECTIVE ERROR (MAE)
+  Ec = 7.8267 ± 2.0399, CI = [4.5455, 12.3182]
+  Ex = 6.3233 ± 1.8703, CI = [2.7261, 10.0920]
+  Percent Change = -19.21%
+  Bootstrap P(Ext &lt; Ctrl) = 0.6930
+  t-test(E): t = 17.178, p = 0.000000 (SIGNIFICANT (p &lt; .05))
+
+[2] MEAN INDIVIDUAL ERROR (ε) — MAE-based
+  ε_ctrl = 8.5200, ε_ext = 8.8636
+  Percent Change = 4.03%
+  Welch t-test p = 0.826
+
+[3] MEAN DIVERSITY (δ) — Std-based
+  δ_ctrl = 9.5887, δ_ext = 8.9767
+  Percent Change = -6.38%
+  Levene p = 0.1336
+
+[4] ANCHOR DIAGNOSTICS
+  Anchors: A = 34.0, B = 6.0
+  Effective: A = False, B = False
+
+[5] EQUATION 6 CHECK (B-L Feasibility)
+  anchor_weight_low = 0.4405, anchor_weight_high = 0.5260
+  Δ = 32.3230
+  Criterion_L = None, Criterion_H = None
+  Eq6 Prediction Correct = True
+
+[6] MEAN δ–ε–E SCENARIO (MAE-based)
+  Scenario: δ:down, ε:up, E:down
+  Mechanism: {&#x27;pattern&#x27;: &#x27;δ:down, ε:up, E:down&#x27;, &#x27;mechanism&#x27;: &#x27;Accidental Correction&#x27;, &#x27;explanation&#x27;: &#x27;Error increased but collective error decreased.&#x27;}
+
+================================================================================
+INTERPRETATION — MEAN AGGREGATION
+================================================================================
+Mean-based collective error changed by -19.21% relative to the true value 14.0. Scenario = δ:down, ε:up, E:down. Eq6 Feasibility = True.
+================================================================================
+
+[7] MEDIAN AGGREGATION SUMMARY
+  Median E: 6.0000 → 7.5000 (25.00%)
+  Median ε: 7.0000 → 9.5000 (35.71%)
+  Median δ: 4.0000 → 8.0000 (100.00%)
+  Median Scenario: δ:up, ε:up, E:up
+  Mean vs Median: Median contradicts mean.
+  Interpretation: Median indicates predictions moved away from the true value (14.0).
+  Median t-test p-value = 0.000135 (SIGNIFICANT (p &lt; .05))
+
+[8] MEAN vs MEDIAN — NUMERICAL COMPARISON
+  Mean Scenario:   δ:down, ε:up, E:down
+  Median Scenario: δ:up, ε:up, E:up
+  Conclusion: Mean improvement is driven by tail behavior, but the median indicates the majority of forecasters moved away from truth = 14.0.
+================================================================================
+
+
+================================================================================
+  END OF MEGA SUMMARY
+================================================================================</pre></div>
+
+<h2>Equation 4 Summary</h2>
+<div class="card"><pre class="block">======================================================================
+  EQUATION 4 COMPLETE ANALYSIS SUMMARY
+  Barrera-Lemarchand et al. (2024) Anchoring Extremeness Effect
+======================================================================
+
+Total observations: 60
+Valid observations: 57
+Excluded observations: 3
+Unique questions: 30
+
+----------------------------------------------------------------------
+AUTOMATIC EXCLUSION CRITERIA
+----------------------------------------------------------------------
+  • Negative weights (w &lt; 0): violates attraction assumption
+  • Extreme weights (w &gt; 2): computational artifact
+  • Missing/invalid values
+
+----------------------------------------------------------------------
+EXCLUDED OBSERVATIONS (automatically detected)
+----------------------------------------------------------------------
+  Q20 High : w =    -0.0379  |  Negative weight (repulsion)
+  Q32 High : w =    38.4271  |  Extreme weight (w &gt; 2)
+  Q40 Low  : w =    -0.2737  |  Negative weight (repulsion)
+
+----------------------------------------------------------------------
+θ vs μ₀ REFERENCE COMPARISON
+----------------------------------------------------------------------
+
+Metric                    θ (Truth)            μ₀ (Control Mean)   
+-----------------------------------------------------------------
+Pearson r                 -0.1636             +0.1943
+  p-value                 0.224             0.1476
+Spearman ρ                -0.2771             +0.2044
+  p-value                 0.03694             0.1273
+Direction correct         Yes ✓              No ✗
+Best model                Hyperbolic         Linear
+
+Fisher&#x27;s z-test: z = -1.880, p = 0.0601
+
+----------------------------------------------------------------------
+CONTROL GROUP BIAS
+----------------------------------------------------------------------
+Overestimate (μ₀ &gt; θ):  21/30 questions (70%)
+Underestimate (μ₀ &lt; θ): 9/30 questions (30%)
+Mean bias: +3458896.3%
+Median bias: +8.4%
+
+----------------------------------------------------------------------
+WITHIN-QUESTION ANALYSIS
+----------------------------------------------------------------------
+Questions with both anchors: 27
+Closer anchor wins: 10/27 (37.0%)
+Binomial test p-value: 0.939
+Paired t-test p-value: 0.7029
+Mean weight difference: 0.0225
+
+----------------------------------------------------------------------
+MODEL COMPARISON (θ reference)
+----------------------------------------------------------------------
+  Hyperbolic: w₀=0.8541, β=1.2507, R²=0.0626, AIC=-116.45
+  Exponential: w₀=0.7673, β=0.5037, R²=0.0375, AIC=-114.95
+  Linear: w₀=0.7336, β=0.2111, R²=0.0268, AIC=-114.32
+
+Best model: Hyperbolic
+
+----------------------------------------------------------------------
+KEY FINDINGS
+----------------------------------------------------------------------
+1. Anchoring extremeness effect is WEAK in naturalistic forecasting data
+   - θ reference: r = -0.164 (expected direction, not significant)
+   - Much weaker than B-L&#x27;s r = -0.56 from controlled experiments
+
+2. Control mean CANNOT substitute for truth as reference
+   - μ₀ reference: r = 0.194 (WRONG direction)
+   - Due to systematic control bias: 70% overestimate
+
+3. Within-question test provides NO support
+   - Closer anchor wins only 37% of time (chance = 50%)
+
+4. All models have low explanatory power (R² &lt; 0.07)
+   - Domain heterogeneity and scale diversity likely attenuate the effect
+</pre></div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="fab">
+    <button id="topBtn">↑ Top</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
